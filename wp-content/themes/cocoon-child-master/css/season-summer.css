@@ -1,5 +1,5 @@
 /* summer — water accents via variables. White backgrounds stay white. */
-body.haru-ver-summer{--hh-c1:#1B8FC4;--hh-c2:#6FC8EF;--hh-c3:#0D86B3;--hh-c4:#0A6E93;--hh-c5:#0D86B3;--hh-c6:#BFE3F1;--hh-t1:#ffffff;--hh-t2:#ffffff;--hh-t3:#ffffff;--hh-t4:#ffffff;--hh-t5:#ffffff;--hh-t6:#ffffff;--hh-b1:#D6EAF5;--hh-rgb:27,143,196;--hh-rgb2:111,200,239;--hh-rgb3:13,134,179;--hh-g1:#1B8FC4;}
+body.haru-ver-summer{--hh-c1:#1B8FC4;--hh-c2:#6FC8EF;--hh-c3:#0D86B3;--hh-c4:#0A6E93;--hh-c5:#0D86B3;--hh-c6:#BFE3F1;--hh-t1:#ffffff;--hh-t2:#ffffff;--hh-t3:#ffffff;--hh-t4:#ffffff;--hh-t5:#ffffff;--hh-t6:#ffffff;--hh-b1:#9FCDDE;--hh-rgb:27,143,196;--hh-rgb2:111,200,239;--hh-rgb3:13,134,179;--hh-g1:#1B8FC4;}
 body.haru-ver-summer .haruhime-carousel__card-icon,body.haru-ver-summer .haruhime-charity-grid__icon,body.haru-ver-summer .haruhime-promise-grid__icon{background:#ffffff !important;}
 body.haru-ver-summer .haruhime-button--outline,body.haru-ver-summer .haruhime-button--outline *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;background-image:none !important;}
 body.haru-ver-summer [class*="haruhime-section"]::before,body.haru-ver-summer [class*="haruhime-section"]::after{background:rgba(27,143,196,.05) !important;}
@@ -11,3 +11,4 @@ body.haru-ver-summer .haruhime-charity-grid__item::after,body.haru-ver-summer .h
 /* button hover fix: primary text always white; outline hover -> water */
 body.haru-ver-summer .haruhime-button--primary,body.haru-ver-summer .haruhime-button--primary:hover,body.haru-ver-summer .haruhime-button--primary:focus,body.haru-ver-summer .haruhime-button--primary *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;}
 body.haru-ver-summer .haruhime-button--outline:hover,body.haru-ver-summer .haruhime-button--outline:hover *{color:#5cc4f0 !important;-webkit-text-fill-color:#5cc4f0 !important;background-color:rgba(255,255,255,.18) !important;border-color:#bfeafd !important;}
+
