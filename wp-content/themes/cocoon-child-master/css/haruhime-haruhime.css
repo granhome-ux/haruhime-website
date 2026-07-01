@@ -185,30 +185,8 @@
 }
 
 /* ----- レスポンシブ ----- */
-@media (max-width: 960px) {
-  .haruhime-promise-grid--3 {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-@media (max-width: 640px) {
-  .haruhime-page-hero {
-    padding: 44px 18px 40px;
-  }
-  .haruhime-page-hero__title {
-    font-size: 26px;
-  }
-  .haruhime-promise-grid--3 {
-    grid-template-columns: 1fr !important;
-  }
-  .haruhime-section-store__grid--info,
-  .haruhime-section-store__grid--sns {
-    grid-template-columns: 1fr !important;
-  }
-  .haruhime-page-mascot__inner {
-    flex-direction: column;
-    text-align: center;
-  }
-}
+
+
 
 /* ============================================================
    SNS (FOLLOW US) — clean rebuild 2026-06-26
@@ -295,14 +273,8 @@
   transform: translateY(-1px);
   box-shadow: 0 8px 20px rgba(225, 48, 108, 0.36);
 }
-@media (max-width: 920px) {
-  .haruhime-sns { gap: 24px; }
-  .haruhime-sns__card { flex: 1 1 100%; max-width: 560px; }
-  .haruhime-sns__card:last-child .haruhime-sns__desc { white-space: normal; }
-}
-@media (max-width: 480px) {
-  .haruhime-sns__card { gap: 14px; }
-  .haruhime-sns__qr { flex-basis: 88px; width: 88px; height: 88px; }
-}
+
+
+
 
 

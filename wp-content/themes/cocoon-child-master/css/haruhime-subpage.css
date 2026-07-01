@@ -81,9 +81,7 @@
 .haruhime-prose h3 { color:var(--hh-c4,#B83A6B); font-size:18px; margin:1.4em 0 .5em; }
 .haruhime-note { max-width:820px; margin:18px auto 0; font-size:12.5px; color:#9a8a90; text-align:center; }
 
-@media (max-width:640px){
-  .haruhime-page-hero__title { font-size:26px; }
-  .haruhime-page-section__title { font-size:22px; }
-}
+
+
 
 
