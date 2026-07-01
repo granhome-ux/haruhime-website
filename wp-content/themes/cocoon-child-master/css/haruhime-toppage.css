@@ -3798,3 +3798,6 @@ body.admin-bar .haruhime-site-header {
 
 
 
+
+/* hero fallback: existing photo, neutral (non-blue) overlay */
+.haruhime-hero{background-image:linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.38)),url("/haruhime-website/wp-content/uploads/2026/05/grok-image-7e8cb994-2083-4910-be53-037e833cfe6d.jpg")!important;background-size:cover!important;background-position:center center!important;background-color:#333333!important;}
