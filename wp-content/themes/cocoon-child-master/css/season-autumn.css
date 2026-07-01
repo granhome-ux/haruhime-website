@@ -6,3 +6,5 @@ body.haru-ver-autumn [class*="haruhime-section"]::before,body.haru-ver-autumn [c
 body.haru-ver-autumn .haruhime-site-header__logo{filter:sepia(1) saturate(2) hue-rotate(5deg) brightness(.95) !important;}
 
 body.haru-ver-autumn .haruhime-charity-grid__item::after,body.haru-ver-autumn .haruhime-charity-grid__label::after,body.haru-ver-autumn [class*="__more"]{color:#C2870F !important;}
+
+body.haru-ver-autumn .haruhime-sns__follow{background:linear-gradient(135deg,#F0B441,#D6920E) !important;background-image:linear-gradient(135deg,#F0B441,#D6920E) !important;color:#fff !important;border-color:#D6920E !important;}

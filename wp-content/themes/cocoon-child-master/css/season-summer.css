@@ -12,3 +12,5 @@ body.haru-ver-summer .haruhime-charity-grid__item::after,body.haru-ver-summer .h
 body.haru-ver-summer .haruhime-button--primary,body.haru-ver-summer .haruhime-button--primary:hover,body.haru-ver-summer .haruhime-button--primary:focus,body.haru-ver-summer .haruhime-button--primary *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;}
 body.haru-ver-summer .haruhime-button--outline:hover,body.haru-ver-summer .haruhime-button--outline:hover *{color:#5cc4f0 !important;-webkit-text-fill-color:#5cc4f0 !important;background-color:rgba(255,255,255,.18) !important;border-color:#bfeafd !important;}
 
+
+body.haru-ver-summer .haruhime-sns__follow{background:linear-gradient(135deg,#3AAFE8,#0D86B3) !important;background-image:linear-gradient(135deg,#3AAFE8,#0D86B3) !important;color:#fff !important;border-color:#0D86B3 !important;}
