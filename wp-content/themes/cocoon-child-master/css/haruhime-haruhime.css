@@ -1,5 +1,5 @@
 /* ============================================================
-   Page: 激安マルシェ「はる姫」 (/haruhime-website/)
+   Page: 激安マルシェ「はる姫」 (/haruhime/)
    page-haruhime.php 専用。haruhime-toppage.css の後に読み込む。
    既存デザインシステム(.haruhime-section-*, .haruhime-promise-grid 等)を流用し、
    ページ固有の要素のみここで定義。配色はトップのピンク基調に準拠。
@@ -304,4 +304,3 @@
   .haruhime-sns__card { gap: 14px; }
   .haruhime-sns__qr { flex-basis: 88px; width: 88px; height: 88px; }
 }
-
