@@ -3,6 +3,7 @@ body.haru-ver-summer{--hh-c1:#1B8FC4;--hh-c2:#6FC8EF;--hh-c3:#0D86B3;--hh-c4:#0A
 body.haru-ver-summer .haruhime-carousel__card-icon,body.haru-ver-summer .haruhime-charity-grid__icon,body.haru-ver-summer .haruhime-promise-grid__icon{background:#ffffff !important;}
 body.haru-ver-summer .haruhime-button--outline,body.haru-ver-summer .haruhime-button--outline *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;background-image:none !important;}
 body.haru-ver-summer [class*="haruhime-section"]::before,body.haru-ver-summer [class*="haruhime-section"]::after{background:rgba(27,143,196,.05) !important;}
-body.haru-ver-summer .haruhime-site-header__logo{filter:hue-rotate(190deg) saturate(1.1) !important;}
+body.haru-ver-summer .haruhime-site-header__logo{filter:hue-rotate(225deg) saturate(1.6) brightness(1.05) !important;}
 
 body.haru-ver-summer .haruhime-charity-grid__item::after,body.haru-ver-summer .haruhime-charity-grid__label::after,body.haru-ver-summer [class*="__more"]{color:#1B8FC4 !important;}
+
