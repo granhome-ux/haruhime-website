@@ -7,3 +7,7 @@ body.haru-ver-summer .haruhime-site-header__logo{filter:hue-rotate(225deg) satur
 
 body.haru-ver-summer .haruhime-charity-grid__item::after,body.haru-ver-summer .haruhime-charity-grid__label::after,body.haru-ver-summer [class*="__more"]{color:#1B8FC4 !important;}
 
+
+/* button hover fix: primary text always white; outline hover -> water */
+body.haru-ver-summer .haruhime-button--primary,body.haru-ver-summer .haruhime-button--primary:hover,body.haru-ver-summer .haruhime-button--primary:focus,body.haru-ver-summer .haruhime-button--primary *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;}
+body.haru-ver-summer .haruhime-button--outline:hover,body.haru-ver-summer .haruhime-button--outline:hover *{color:#5cc4f0 !important;-webkit-text-fill-color:#5cc4f0 !important;background-color:rgba(255,255,255,.18) !important;border-color:#bfeafd !important;}
