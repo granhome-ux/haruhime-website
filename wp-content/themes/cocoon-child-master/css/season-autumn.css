@@ -114,3 +114,5 @@ body.haru-ver-autumn .hcmodal__btn:hover {
 
 /* full seasonal palette */
 body.haru-ver-autumn{--hh-c1:#C2870F;--hh-c2:#E3BB55;--hh-c3:#D6920E;--hh-c4:#A8730C;--hh-t1:#FCF7ED;--hh-t2:#FBEBD0;--hh-t3:#F6E8C6;--hh-t4:#FBF1DA;--hh-t5:#F6E8C6;--hh-b1:#E8DFC8;--hh-rgb:194,135,15;--hh-rgb2:227,187,85;--hh-rgb3:214,146,14;}
+
+body.haru-ver-autumn{--hh-c5:#A8730C;--hh-c6:#F0DDA8;--hh-t6:#FCF9F1;--hh-g1:#C2870F;} body.haru-ver-autumn .haruhime-carousel__card-icon,body.haru-ver-autumn .haruhime-charity-grid__icon,body.haru-ver-autumn .haruhime-promise-grid__icon{background:#ffffff !important;} body.haru-ver-autumn .haruhime-button--outline,body.haru-ver-autumn .haruhime-button--outline *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;background-image:none !important;}

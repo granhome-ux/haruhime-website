@@ -6,8 +6,8 @@
 :root {
   --haruhime-pink: var(--hh-accent2, var(--hh-c2,#FF8FAB));
   --haruhime-deep-pink: var(--hh-accent, var(--hh-c1,#E91E63));
-  --haruhime-cream: #FFF8F0;
-  --haruhime-gold: #DAA520;
+  --haruhime-cream: var(--hh-t6,#FFF8F0);
+  --haruhime-gold: var(--hh-g1,#DAA520);
   --haruhime-text: #333333;
   --haruhime-header-height: 72px;
   --haruhime-brand-font: "RiiCookieR", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -282,7 +282,7 @@ body.admin-bar .haruhime-site-header {
 
   .haruhime-global-nav__link:hover,
   .haruhime-global-nav__link:focus-visible {
-    background: var(--hh-tint, #FFF0F5);
+    background: var(--hh-tint, var(--hh-t6,#FFF0F5));
   }
 }
 
@@ -324,7 +324,7 @@ body.admin-bar .haruhime-site-header {
 
 .haruhime-section-business {
   position: relative;
-  background: linear-gradient(180deg, var(--hh-tint, #FFF8FA) 0%, #ffffff 100%);
+  background: linear-gradient(180deg, var(--hh-tint, var(--hh-t6,#FFF8FA)) 0%, #ffffff 100%);
   padding: 80px 20px 88px;
   overflow: hidden;
 }
@@ -453,7 +453,7 @@ body.admin-bar .haruhime-site-header {
   height: 64px;
   margin: 0 auto 18px;
   border-radius: 999px;
-  background: var(--hh-tint, #FFF0F5);
+  background: var(--hh-tint, var(--hh-t6,#FFF0F5));
   color: var(--hh-accent, var(--hh-c1,#E91E63));
   font-size: 30px;
   line-height: 1;
@@ -525,7 +525,7 @@ body.admin-bar .haruhime-site-header {
 
 .haruhime-carousel__card-button:hover,
 .haruhime-carousel__card-button:focus {
-  background: var(--hh-accent-darker, #C2185B);
+  background: var(--hh-accent-darker, var(--hh-c5,#C2185B));
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(var(--hh-accent-rgb, var(--hh-rgb,233,30,99)), 0.32);
@@ -935,7 +935,7 @@ body.admin-bar .haruhime-site-header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: linear-gradient(160deg, #ffffff 0%, var(--hh-tint, #FFF0F5) 100%);
+  background: linear-gradient(160deg, #ffffff 0%, var(--hh-tint, var(--hh-t6,#FFF0F5)) 100%);
   border: 1px solid var(--hh-border-soft, var(--hh-t3,#FFD1DE));
   border-radius: 28px;
   padding: 26px 24px 28px;
@@ -1037,7 +1037,7 @@ body.admin-bar .haruhime-site-header {
 
 .haruhime-charity-product__button:hover,
 .haruhime-charity-product__button:focus {
-  background: var(--hh-accent-darker, #C2185B);
+  background: var(--hh-accent-darker, var(--hh-c5,#C2185B));
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 16px 32px rgba(var(--hh-accent-rgb, var(--hh-rgb,233,30,99)), 0.36);
@@ -1261,7 +1261,7 @@ body.admin-bar .haruhime-site-header {
 
 .haruhime-section-promise {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, var(--hh-tint, #FFF8FA) 50%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--hh-tint, var(--hh-t6,#FFF8FA)) 50%, #ffffff 100%);
   padding: 84px 20px 88px;
   overflow: hidden;
 }
@@ -1362,7 +1362,7 @@ body.admin-bar .haruhime-site-header {
   height: 68px;
   margin: 0 auto 18px;
   border-radius: 999px;
-  background: var(--hh-tint, #FFF0F5);
+  background: var(--hh-tint, var(--hh-t6,#FFF0F5));
   color: var(--hh-accent, var(--hh-c1,#E91E63));
   font-size: 32px;
   line-height: 1;
@@ -1462,7 +1462,7 @@ body.admin-bar .haruhime-site-header {
 
 .haruhime-section-seasonal {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, var(--hh-tint, #fff9fb) 50%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--hh-tint, var(--hh-t6,#FFF9FB)) 50%, #ffffff 100%);
   padding: 84px 20px 88px;
   overflow: hidden;
 }
@@ -1677,7 +1677,7 @@ body.admin-bar .haruhime-site-header {
 
 .haruhime-section-store {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, var(--hh-tint, #FFF8FA) 50%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--hh-tint, var(--hh-t6,#FFF8FA)) 50%, #ffffff 100%);
   padding: 84px 20px 88px;
   overflow: hidden;
 }
@@ -1859,7 +1859,7 @@ body.admin-bar .haruhime-site-header {
 
 .haruhime-store-map__button:hover,
 .haruhime-store-map__button:focus {
-  background: var(--hh-accent-darker, #C2185B);
+  background: var(--hh-accent-darker, var(--hh-c5,#C2185B));
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 16px 32px rgba(var(--hh-accent-rgb, var(--hh-rgb,233,30,99)), 0.36);
@@ -2600,7 +2600,7 @@ body.admin-bar .haruhime-site-header {
   grid-template-rows: auto auto !important;
   gap: 0 !important;
   background: #FFFFFF !important;
-  border: 1px solid var(--hh-border-soft, #F4C0D1) !important;
+  border: 1px solid var(--hh-border-soft, var(--hh-c6,#F4C0D1)) !important;
   border-radius: 16px !important;
   box-shadow: 0 4px 16px rgba(var(--hh-accent-dark-rgb, var(--hh-rgb3,212,83,126)), 0.08) !important;
   padding: 0 !important;
@@ -2951,7 +2951,7 @@ body.admin-bar .haruhime-site-header {
   width: 45% !important;
   height: 100% !important;
   aspect-ratio: auto !important;
-  background: var(--hh-tint, #FBEAF0) !important;
+  background: var(--hh-tint, var(--hh-t6,#FBEAF0)) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -3795,5 +3795,6 @@ body.admin-bar .haruhime-site-header {
     display:-webkit-box !important; -webkit-line-clamp:2 !important; -webkit-box-orient:vertical !important; overflow:hidden !important;
   }
 }
+
 
 

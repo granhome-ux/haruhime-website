@@ -11,7 +11,7 @@
 
 /* ----- (1) ページヒーロー ----- */
 .haruhime-page-hero {
-  background: linear-gradient(135deg, #FBEAF0 0%, var(--hh-t2,#FFE4EC) 100%);
+  background: linear-gradient(135deg, var(--hh-t6,#FBEAF0) 0%, var(--hh-t2,#FFE4EC) 100%);
   padding: 64px 20px 56px;
   text-align: center;
 }
@@ -67,7 +67,7 @@
 
 /* ----- (5) キャラクター ----- */
 .haruhime-page-mascot {
-  background: #FFFAF5;
+  background: var(--hh-t6,#FFFAF5);
   padding: 56px 20px;
 }
 .haruhime-page-mascot__inner {
@@ -145,7 +145,7 @@
   padding: 22px 18px;
   border: 1px solid var(--hh-b1,#F3D3DF);
   border-radius: 14px;
-  background: #FDF6F9;
+  background: var(--hh-t6,#FDF6F9);
   text-align: center;
 }
 .haruhime-page-payment__icon {
@@ -163,7 +163,7 @@
 
 /* ----- (8) CTA ----- */
 .haruhime-page-cta {
-  background: linear-gradient(135deg, var(--hh-t2,#FFE4EC) 0%, #FBEAF0 100%);
+  background: linear-gradient(135deg, var(--hh-t2,#FFE4EC) 0%, var(--hh-t6,#FBEAF0) 100%);
   padding: 56px 20px;
   text-align: center;
 }
@@ -304,4 +304,5 @@
   .haruhime-sns__card { gap: 14px; }
   .haruhime-sns__qr { flex-basis: 88px; width: 88px; height: 88px; }
 }
+
 

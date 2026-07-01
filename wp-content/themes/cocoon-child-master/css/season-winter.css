@@ -104,3 +104,5 @@ body.haru-ver-winter .haruhime-charity-product__image { content: url("/haruhime-
 
 /* full seasonal palette */
 body.haru-ver-winter{--hh-c1:#6B7684;--hh-c2:#AAB2BD;--hh-c3:#566270;--hh-c4:#444E5A;--hh-t1:#F5F7FA;--hh-t2:#EDF1F5;--hh-t3:#E3E8EE;--hh-t4:#EEF1F5;--hh-t5:#E3E8EE;--hh-b1:#E1E6EC;--hh-rgb:107,118,132;--hh-rgb2:170,178,189;--hh-rgb3:86,98,112;}
+
+body.haru-ver-winter{--hh-c5:#566270;--hh-c6:#D6DEE6;--hh-t6:#F7F9FB;--hh-g1:#6B7684;} body.haru-ver-winter .haruhime-carousel__card-icon,body.haru-ver-winter .haruhime-charity-grid__icon,body.haru-ver-winter .haruhime-promise-grid__icon{background:#ffffff !important;} body.haru-ver-winter .haruhime-button--outline,body.haru-ver-winter .haruhime-button--outline *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;background-image:none !important;}

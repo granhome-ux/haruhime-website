@@ -15,7 +15,7 @@
 
 /* ----- 汎用コンテンツセクション ----- */
 .haruhime-page-section { padding:56px 20px; }
-.haruhime-page-section--tint { background:#FFFAF5; }
+.haruhime-page-section--tint { background:var(--hh-t6,#FFFAF5); }
 .haruhime-page-section__inner { max-width:1080px; margin:0 auto; }
 .haruhime-page-section__header { text-align:center; margin-bottom:32px; }
 .haruhime-page-section__eyebrow { font-size:12px; letter-spacing:.18em; color:var(--hh-c3,#D4537E); font-weight:600; margin:0 0 6px; }
@@ -34,7 +34,7 @@
 .haruhime-plan-grid { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; }
 .haruhime-plan { background:#fff; border:1px solid var(--hh-b1,#F3D3DF); border-radius:16px; padding:26px 22px; text-align:center; display:flex; flex-direction:column; }
 .haruhime-plan--featured { border:2px solid var(--hh-c3,#D4537E); }
-.haruhime-plan__badge { align-self:center; background:#FBEAF0; color:var(--hh-c4,#B83A6B); font-size:12px; font-weight:700; padding:4px 12px; border-radius:999px; margin:0 0 10px; }
+.haruhime-plan__badge { align-self:center; background:var(--hh-t6,#FBEAF0); color:var(--hh-c4,#B83A6B); font-size:12px; font-weight:700; padding:4px 12px; border-radius:999px; margin:0 0 10px; }
 .haruhime-plan__name { font-size:17px; font-weight:700; color:var(--hh-c4,#B83A6B); margin:0 0 8px; }
 .haruhime-plan__price { font-size:24px; font-weight:700; color:var(--hh-c3,#D4537E); margin:0 0 4px; }
 .haruhime-plan__price small { font-size:13px; color:#7a6770; font-weight:500; }
@@ -65,7 +65,7 @@
 .haruhime-page-payment__eyebrow { font-size:12px; letter-spacing:.18em; color:var(--hh-c3,#D4537E); font-weight:600; margin:0 0 6px; }
 .haruhime-page-payment__title { font-size:24px; color:var(--hh-c4,#B83A6B); font-weight:700; margin:0; }
 .haruhime-page-payment__list { list-style:none; margin:0; padding:0; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-.haruhime-page-payment__item { flex:0 1 280px; display:flex; flex-direction:column; align-items:center; gap:6px; padding:22px 18px; border:1px solid var(--hh-b1,#F3D3DF); border-radius:14px; background:#FDF6F9; text-align:center; }
+.haruhime-page-payment__item { flex:0 1 280px; display:flex; flex-direction:column; align-items:center; gap:6px; padding:22px 18px; border:1px solid var(--hh-b1,#F3D3DF); border-radius:14px; background:var(--hh-t6,#FDF6F9); text-align:center; }
 .haruhime-page-payment__icon { font-size:30px; }
 .haruhime-page-payment__label { font-size:15px; font-weight:700; color:var(--hh-c4,#B83A6B); }
 .haruhime-page-payment__note { font-size:13px; color:#7a6770; }
@@ -85,4 +85,5 @@
   .haruhime-page-hero__title { font-size:26px; }
   .haruhime-page-section__title { font-size:22px; }
 }
+
 
