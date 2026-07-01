@@ -4,3 +4,5 @@ body.haru-ver-winter .haruhime-carousel__card-icon,body.haru-ver-winter .haruhim
 body.haru-ver-winter .haruhime-button--outline,body.haru-ver-winter .haruhime-button--outline *{color:#ffffff !important;-webkit-text-fill-color:#ffffff !important;background-image:none !important;}
 body.haru-ver-winter [class*="haruhime-section"]::before,body.haru-ver-winter [class*="haruhime-section"]::after{background:rgba(107,118,132,.05) !important;}
 body.haru-ver-winter .haruhime-site-header__logo{filter:grayscale(1) brightness(1.05) !important;}
+
+body.haru-ver-winter .haruhime-charity-grid__item::after,body.haru-ver-winter .haruhime-charity-grid__label::after,body.haru-ver-winter [class*="__more"]{color:#6B7684 !important;}

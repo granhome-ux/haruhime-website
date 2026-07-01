@@ -215,6 +215,8 @@ img,picture,video,svg,canvas{ -webkit-user-drag:none!important; }
 function seas(){var q=location.search.match(/(?:preview_)?season=(spring|summer|autumn|winter)/);if(q)return q[1];var m=new Date().getMonth()+1;if(m>=3&&m<=5)return"spring";if(m>=6&&m<=8)return"summer";if(m>=9&&m<=11)return"autumn";return"winter";}
 var S=seas();
 var P={summer:{a:"#1B8FC4",rgb:"27,143,196"},autumn:{a:"#C2870F",rgb:"194,135,15"},winter:{a:"#6B7684",rgb:"107,118,132"}};
+var BASE="/haruhime-website/wp-content/uploads/season-chars/";
+var CH={summer:{c:["summer1.png","summer2.png","summer3.png"],k:"summerkey.jpg"},autumn:{c:["autumn1.png","autumn2.png","autumn3.png"],k:"autumnkey.jpg"},winter:{c:[],k:"winterkey.jpg"}};
 function toRGB(s){var m=s&&s.match(/rgba?\(([^)]+)\)/);if(!m)return null;return m[1].split(",").map(function(x){return parseFloat(x);});}
 function pink(r,g,b){if(r<60&&g<60&&b<60)return false;var mn=Math.min(r,g,b),mx=Math.max(r,g,b);if(mn>=214)return false;if(mx-mn<25)return false;return (r>g+15&&r>=b-10);}
 function fix(e,pal){if(!e||!e.style||!e.style.setProperty)return;if(e.closest&&e.closest(".haruhime-hero"))return;var cs;try{cs=getComputedStyle(e);}catch(x){return;}
@@ -223,7 +225,8 @@ var bg=toRGB(cs.backgroundColor);if(bg&&bg[3]!==0&&pink(bg[0],bg[1],bg[2])){e.st
 if(cs.backgroundImage&&cs.backgroundImage.indexOf("gradient")>-1&&/rgb/.test(cs.backgroundImage)){var gm=cs.backgroundImage.match(/rgba?\([^)]+\)/g)||[];if(gm.some(function(x){var p=toRGB(x);return p&&pink(p[0],p[1],p[2]);})){e.style.setProperty("background-image","none","important");e.style.setProperty("background-color",pal.a,"important");}}
 [["borderTopColor","border-top-color"],["borderRightColor","border-right-color"],["borderBottomColor","border-bottom-color"],["borderLeftColor","border-left-color"]].forEach(function(bp){var bc=toRGB(cs[bp[0]]);if(bc&&bc[3]!==0&&pink(bc[0],bc[1],bc[2])){e.style.setProperty(bp[1],"rgba("+pal.rgb+",.5)","important");}});
 if(cs.boxShadow&&cs.boxShadow!=="none"&&/rgb/.test(cs.boxShadow)){var sm=cs.boxShadow.match(/rgba?\([^)]+\)/g)||[];if(sm.some(function(x){var p=toRGB(x);return p&&pink(p[0],p[1],p[2]);})){var ns=cs.boxShadow;sm.forEach(function(x){var p=toRGB(x);if(p&&pink(p[0],p[1],p[2])){ns=ns.split(x).join("rgba("+pal.rgb+","+(p[3]!=null?p[3]:0.3)+")");}});e.style.setProperty("box-shadow",ns,"important");}}}
-function setSeason(){var b=document.body,arr=["spring","summer","autumn","winter"];arr.forEach(function(x){b.classList.remove("haru-ver-"+x);var l=document.getElementById("haru-ss-"+x);if(l)l.disabled=(x!==S);});b.classList.add("haru-ver-"+S);if(S==="spring")return;var pal=P[S];b.style.setProperty("--haruhime-deep-pink",pal.a,"important");b.style.setProperty("--haruhime-pink",pal.a,"important");var els=document.querySelectorAll("body *");for(var i=0;i<els.length;i++){fix(els[i],pal);}}
+function swapImgs(){var cf=CH[S];if(!cf)return;if(cf.c&&cf.c.length){var pk=BASE+cf.c[Math.floor(Math.random()*cf.c.length)];document.querySelectorAll(".haruhime-hero__mascot,.haruhime-section-charity__mascot").forEach(function(im){im.removeAttribute("srcset");im.src=pk;});}if(cf.k){document.querySelectorAll(".haruhime-charity-product__image").forEach(function(im){im.removeAttribute("srcset");im.src=BASE+cf.k;});}}
+function setSeason(){var b=document.body,arr=["spring","summer","autumn","winter"];arr.forEach(function(x){b.classList.remove("haru-ver-"+x);var l=document.getElementById("haru-ss-"+x);if(l)l.disabled=(x!==S);});b.classList.add("haru-ver-"+S);if(S==="spring"){return;}var pal=P[S];b.style.setProperty("--haruhime-deep-pink",pal.a,"important");b.style.setProperty("--haruhime-pink",pal.a,"important");var els=document.querySelectorAll("body *");for(var i=0;i<els.length;i++){fix(els[i],pal);}swapImgs();}
 function run(){setSeason();}
 if(document.readyState!=="loading")run();else document.addEventListener("DOMContentLoaded",run);
 document.addEventListener("mouseover",function(ev){if(S==="spring")return;fix(ev.target,P[S]);},true);
@@ -377,6 +380,7 @@ var cocoon_localize_script_options = {"is_lazy_load_enable":null,"is_fixed_mobil
 <script id="cocoon-child-js-js" src="/haruhime-website/wp-content/themes/cocoon-child-master/javascript.js?ver=7.0&#038;fver=20260512055108"></script>
 </body>
 </html>
+
 
 
 
