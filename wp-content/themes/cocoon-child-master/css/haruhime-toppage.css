@@ -1,0 +1,3799 @@
+/*
+ * Haruhime top page styles.
+ * Phase 1: header and hero only.
+ */
+
+:root {
+  --haruhime-pink: #FF8FAB;
+  --haruhime-deep-pink: #E91E63;
+  --haruhime-cream: #FFF8F0;
+  --haruhime-gold: #DAA520;
+  --haruhime-text: #333333;
+  --haruhime-header-height: 72px;
+  --haruhime-brand-font: "RiiCookieR", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  --haruhime-body-font: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+body.haruhime-top-template {
+  margin: 0;
+  background: #ffffff;
+  color: var(--haruhime-text);
+  font-family: var(--haruhime-body-font);
+}
+
+body.haruhime-top-template * {
+  box-sizing: border-box;
+}
+
+.haruhime-site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  min-height: var(--haruhime-header-height);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(233, 30, 99, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+body.admin-bar .haruhime-site-header {
+  top: 32px;
+}
+
+.haruhime-site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1200px, calc(100% - 32px));
+  min-height: var(--haruhime-header-height);
+  margin: 0 auto;
+  gap: 24px;
+}
+
+.haruhime-site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.haruhime-site-header__logo {
+  display: block;
+  width: 180px;
+  max-width: 42vw;
+  height: 56px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.haruhime-global-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.haruhime-global-nav__link {
+  color: #333333;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.haruhime-global-nav__link:hover,
+.haruhime-global-nav__link:focus-visible {
+  color: var(--haruhime-deep-pink);
+}
+
+.haruhime-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(233, 30, 99, 0.20);
+  border-radius: 999px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.haruhime-menu-toggle__line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  border-radius: 999px;
+  background: var(--haruhime-deep-pink);
+}
+
+.haruhime-top-page {
+  min-height: 100vh;
+}
+
+.haruhime-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  padding: calc(var(--haruhime-header-height) + 40px) 16px var(--haruhime-header-height);
+  overflow: hidden;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+    url("/haruhime-website/wp-content/uploads/2026/05/%E3%81%AF%E3%82%8B%E5%A7%AB%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7%E9%A2%A8%E6%99%AF%E6%98%A5.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.haruhime-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+}
+
+.haruhime-hero__content {
+  position: relative;
+  z-index: 1;
+  width: min(920px, 100%);
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+.haruhime-hero__eyebrow {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--haruhime-body-font);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.haruhime-hero__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--haruhime-brand-font);
+  font-size: clamp(24px, 6.2vw, 36px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+}
+
+.haruhime-hero__divider {
+  width: min(260px, 64vw);
+  height: 1px;
+  margin: 22px auto 26px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.88), transparent);
+}
+
+.haruhime-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.haruhime-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.haruhime-button:hover,
+.haruhime-button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.haruhime-button--primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--haruhime-pink), var(--haruhime-deep-pink));
+  box-shadow: 0 10px 26px rgba(233, 30, 99, 0.35);
+}
+
+.haruhime-button--outline {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.haruhime-button--outline:hover,
+.haruhime-button--outline:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+@media (min-width: 768px) {
+      .haruhime-hero {
+    min-height: 100vh;
+    min-height: max(100vh, 56.5vw);
+    min-height: max(100svh, 56.5vw);
+    padding-top: calc(var(--haruhime-header-height) + 48px);
+    padding-bottom: var(--haruhime-header-height);
+  }
+
+  .haruhime-hero__eyebrow {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  body.admin-bar .haruhime-site-header {
+    top: 46px;
+  }
+
+  .haruhime-site-header__inner {
+    position: relative;
+  }
+
+  .haruhime-site-header__logo {
+    width: 150px;
+    height: 52px;
+  }
+
+  .haruhime-menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .haruhime-global-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px;
+    border: 1px solid rgba(233, 30, 99, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+  }
+
+  .haruhime-site-header.is-open .haruhime-global-nav {
+    display: flex;
+  }
+
+  .haruhime-global-nav__link {
+    display: block;
+    padding: 13px 14px;
+    border-radius: 10px;
+  }
+
+  .haruhime-global-nav__link:hover,
+  .haruhime-global-nav__link:focus-visible {
+    background: #fff0f5;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --haruhime-header-height: 68px;
+  }
+
+      .haruhime-hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: var(--haruhime-header-height);
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),
+      url("/haruhime-website/wp-content/uploads/2026/05/haruhimetopmobail.png");
+    background-position: center 20px;
+    background-size: cover;
+    background-color: #1f1a1c;
+  }
+
+  .haruhime-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: min(320px, 100%);
+    margin: 0 auto;
+  }
+
+  .haruhime-button {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section 2: Business Carousel
+   ============================================================ */
+
+.haruhime-section-business {
+  position: relative;
+  background: linear-gradient(180deg, #fff8fa 0%, #ffffff 100%);
+  padding: 80px 20px 88px;
+  overflow: hidden;
+}
+
+.haruhime-section-business::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 300px;
+  height: 300px;
+  border-radius: 999px;
+  background: rgba(233, 30, 99, 0.08);
+  pointer-events: none;
+}
+
+.haruhime-section-business::after {
+  content: "";
+  position: absolute;
+  left: -140px;
+  bottom: -160px;
+  width: 340px;
+  height: 340px;
+  border-radius: 999px;
+  background: rgba(255, 224, 232, 0.7);
+  pointer-events: none;
+}
+
+.haruhime-section-business__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.haruhime-section-business__header {
+  text-align: center;
+  margin: 0 0 42px;
+}
+
+.haruhime-section-business__eyebrow {
+  margin: 0 0 10px;
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.haruhime-section-business__title {
+  margin: 0;
+  color: #e91e63;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.haruhime-section-business__subtitle {
+  margin: 14px auto 0;
+  max-width: 720px;
+  color: #666666;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.haruhime-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) 54px;
+  align-items: center;
+  gap: 18px;
+  outline: none;
+}
+
+.haruhime-carousel:focus-visible {
+  outline: 3px solid rgba(233, 30, 99, 0.35);
+  outline-offset: 8px;
+  border-radius: 24px;
+}
+
+.haruhime-carousel__viewport {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.haruhime-carousel__track {
+  display: flex;
+  width: 100%;
+  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.haruhime-carousel__slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 4px;
+}
+
+.haruhime-carousel__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+  background: #ffffff;
+  border: 1px solid #ffe0e8;
+  border-radius: 24px;
+  padding: 28px 24px 24px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.haruhime-carousel__card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(233, 30, 99, 0.35);
+  box-shadow: 0 24px 52px rgba(233, 30, 99, 0.13);
+}
+
+.haruhime-carousel__card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  background: #fff0f5;
+  color: #e91e63;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.haruhime-carousel__card-number {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 26px;
+  margin: 0 0 12px;
+  border-radius: 999px;
+  background: #e91e63;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.haruhime-carousel__card-title {
+  margin: 0 0 12px;
+  color: #333333;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.haruhime-carousel__card-catch {
+  margin: 0 0 14px;
+  color: #e91e63;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.haruhime-carousel__card-desc {
+  flex: 1 1 auto;
+  margin: 0 0 22px;
+  color: #666666;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.85;
+  text-align: left;
+}
+
+.haruhime-carousel__card-button {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 138px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #e91e63;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(233, 30, 99, 0.24);
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.haruhime-carousel__card-button:hover,
+.haruhime-carousel__card-button:focus {
+  background: #c2185b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(233, 30, 99, 0.32);
+  text-decoration: none;
+}
+
+.haruhime-carousel__card-button:focus-visible {
+  outline: 3px solid rgba(233, 30, 99, 0.3);
+  outline-offset: 4px;
+}
+
+.haruhime-carousel__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #e91e63;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.haruhime-carousel__arrow:hover,
+.haruhime-carousel__arrow:focus {
+  background: #e91e63;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(233, 30, 99, 0.28);
+}
+
+.haruhime-carousel__arrow:focus-visible {
+  outline: 3px solid rgba(233, 30, 99, 0.3);
+  outline-offset: 4px;
+}
+
+.haruhime-carousel__arrow--prev {
+  justify-self: end;
+}
+
+.haruhime-carousel__arrow--next {
+  justify-self: start;
+}
+
+.haruhime-carousel__indicators {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 26px 0 0;
+}
+
+.haruhime-carousel__indicator {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #ffd1de;
+  cursor: pointer;
+  transition: width 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.haruhime-carousel__indicator[aria-current="true"] {
+  width: 34px;
+  background: #e91e63;
+}
+
+.haruhime-carousel__indicator:hover,
+.haruhime-carousel__indicator:focus {
+  transform: translateY(-1px);
+  background: #e91e63;
+}
+
+.haruhime-carousel__indicator:focus-visible {
+  outline: 3px solid rgba(233, 30, 99, 0.3);
+  outline-offset: 5px;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-business {
+    padding: 68px 18px 76px;
+  }
+
+  .haruhime-carousel {
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+    gap: 12px;
+  }
+
+  .haruhime-carousel__slide {
+    gap: 16px;
+  }
+
+  .haruhime-carousel__card {
+    min-height: 410px;
+    padding: 24px 18px 22px;
+  }
+
+  .haruhime-carousel__card-desc {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .haruhime-carousel__arrow {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .haruhime-section-business {
+    padding: 56px 16px 64px;
+  }
+
+  .haruhime-section-business__header {
+    margin-bottom: 30px;
+  }
+
+  .haruhime-carousel {
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    gap: 8px;
+  }
+
+  .haruhime-carousel__viewport {
+    border-radius: 22px;
+  }
+
+  .haruhime-carousel__slide {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .haruhime-carousel__card {
+    min-height: 0;
+    padding: 24px 20px 22px;
+  }
+
+  .haruhime-carousel__card-title {
+    font-size: 20px;
+  }
+
+  .haruhime-carousel__card-catch {
+    font-size: 14.5px;
+  }
+
+  .haruhime-carousel__card-desc {
+    font-size: 14px;
+  }
+
+  .haruhime-carousel__arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .haruhime-section-business {
+    padding: 48px 14px 56px;
+  }
+
+  .haruhime-section-business__subtitle {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .haruhime-carousel {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .haruhime-carousel__arrow {
+    position: static;
+    width: 44px;
+    height: 44px;
+  }
+
+  .haruhime-carousel__arrow--prev,
+  .haruhime-carousel__arrow--next {
+    justify-self: center;
+  }
+
+  .haruhime-carousel__arrow--prev {
+    grid-row: 2;
+    grid-column: 1;
+    margin-right: 64px;
+  }
+
+  .haruhime-carousel__arrow--next {
+    grid-row: 2;
+    grid-column: 1;
+    margin-left: 64px;
+  }
+
+  .haruhime-carousel__viewport {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .haruhime-carousel__indicators {
+    grid-row: 3;
+    grid-column: 1;
+    margin-top: 4px;
+  }
+
+  .haruhime-carousel__card {
+    padding: 22px 18px 20px;
+  }
+
+  .haruhime-carousel__card-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .haruhime-carousel__card-desc {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haruhime-carousel__track,
+  .haruhime-carousel__card,
+  .haruhime-carousel__card-button,
+  .haruhime-carousel__arrow,
+  .haruhime-carousel__indicator {
+    transition: none;
+  }
+
+  .haruhime-carousel__card:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section Charity: 私たちの想い
+   ============================================================ */
+
+.haruhime-section-charity {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f8 50%, #ffffff 100%);
+  padding: 84px 20px 88px;
+  overflow: hidden;
+}
+
+.haruhime-section-charity::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  background: rgba(255, 192, 203, 0.18);
+  pointer-events: none;
+}
+
+.haruhime-section-charity::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: rgba(233, 30, 99, 0.07);
+  pointer-events: none;
+}
+
+.haruhime-section-charity__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.haruhime-section-charity__header {
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.haruhime-section-charity__eyebrow {
+  margin: 0 0 10px;
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.haruhime-section-charity__title {
+  margin: 0;
+  color: #e91e63;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.haruhime-section-charity__subtitle {
+  margin: 14px auto 0;
+  max-width: 720px;
+  color: #666666;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.haruhime-section-charity__body {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.haruhime-section-charity__activities {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ffe0e8;
+  border-radius: 28px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.haruhime-section-charity__block-title {
+  margin: 0 0 22px;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.haruhime-charity-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+
+.haruhime-charity-grid__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #fff5f8;
+  border: 1px solid #ffe0e8;
+  border-radius: 14px;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.haruhime-charity-grid__item:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(233, 30, 99, 0.10);
+}
+
+.haruhime-charity-grid__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: #ffe0e8;
+  font-size: 18px;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.haruhime-charity-grid__label {
+  color: #333333;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.haruhime-section-charity__mascot {
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0.95;
+  z-index: 1;
+}
+
+.haruhime-section-charity__product {
+  display: flex;
+}
+
+.haruhime-charity-product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(160deg, #ffffff 0%, #fff0f5 100%);
+  border: 1px solid #ffd1de;
+  border-radius: 28px;
+  padding: 26px 24px 28px;
+  box-shadow: 0 16px 36px rgba(233, 30, 99, 0.12);
+}
+
+.haruhime-charity-product__image-wrap {
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 14px;
+  box-shadow: inset 0 0 0 1px #ffe0e8;
+}
+
+.haruhime-charity-product__image {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 16px;
+}
+
+.haruhime-charity-product__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+.haruhime-charity-product__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 14px;
+  margin: 0 0 10px;
+  border-radius: 999px;
+  background: #e91e63;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.haruhime-charity-product__title {
+  margin: 0 0 8px;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.haruhime-charity-product__price {
+  margin: 0 0 12px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: #e91e63;
+  font-weight: 800;
+}
+
+.haruhime-charity-product__price-num {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.haruhime-charity-product__price-unit {
+  font-size: 16px;
+}
+
+.haruhime-charity-product__desc {
+  margin: 0 0 18px;
+  color: #666666;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.haruhime-charity-product__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 46px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #e91e63;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(233, 30, 99, 0.28);
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.haruhime-charity-product__button:hover,
+.haruhime-charity-product__button:focus {
+  background: #c2185b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(233, 30, 99, 0.36);
+  text-decoration: none;
+}
+
+.haruhime-charity-product__button:focus-visible {
+  outline: 3px solid rgba(233, 30, 99, 0.3);
+  outline-offset: 4px;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-charity {
+    padding: 72px 18px 76px;
+  }
+  .haruhime-section-charity__body {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .haruhime-section-charity__mascot {
+    width: 140px;
+    height: 140px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .haruhime-section-charity {
+    padding: 56px 14px 60px;
+  }
+  .haruhime-section-charity__header {
+    margin-bottom: 32px;
+  }
+  .haruhime-section-charity__activities {
+    padding: 26px 20px 22px;
+  }
+  .haruhime-charity-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .haruhime-charity-grid__item {
+    padding: 10px 12px;
+  }
+  .haruhime-charity-grid__icon {
+    width: 34px;
+    height: 34px;
+    font-size: 17px;
+  }
+  .haruhime-charity-grid__label {
+    font-size: 13px;
+  }
+  .haruhime-section-charity__mascot {
+    width: 110px;
+    height: 110px;
+    right: -8px;
+    bottom: -8px;
+    opacity: 0.9;
+  }
+  .haruhime-charity-product {
+    padding: 22px 18px 24px;
+  }
+  .haruhime-charity-product__title {
+    font-size: 18px;
+  }
+  .haruhime-charity-product__price-num {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haruhime-charity-grid__item,
+  .haruhime-charity-product__button {
+    transition: none;
+  }
+  .haruhime-charity-grid__item:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Hero scroll hint
+   ============================================================ */
+
+.haruhime-hero__scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  opacity: 0.85;
+  z-index: 2;
+  transition: opacity 180ms ease;
+}
+
+.haruhime-hero__scroll-hint:hover,
+.haruhime-hero__scroll-hint:focus {
+  color: #ffffff;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.haruhime-hero__scroll-hint:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 6px;
+  border-radius: 8px;
+}
+
+.haruhime-hero__scroll-hint-label {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.haruhime-hero__scroll-hint-arrow {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1;
+  animation: haruhime-scroll-bounce 2200ms ease-in-out infinite;
+}
+
+@keyframes haruhime-scroll-bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 520px) {
+  .haruhime-hero__scroll-hint {
+    bottom: 18px;
+    gap: 4px;
+  }
+  .haruhime-hero__scroll-hint-label {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+  }
+  .haruhime-hero__scroll-hint-arrow {
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haruhime-hero__scroll-hint-arrow {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section 2 Tune: Mobile fade transition
+   ============================================================ */
+
+@media (max-width: 520px) {
+  .haruhime-carousel__viewport {
+    position: relative;
+    min-height: 1200px;
+  }
+
+  .haruhime-carousel__track {
+    transform: none !important;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: none;
+  }
+
+  .haruhime-carousel__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 600ms ease-in-out, visibility 0s linear 600ms;
+  }
+
+  .haruhime-carousel__slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 600ms ease-in-out, visibility 0s linear 0s;
+  }
+}
+
+@media (max-width: 520px) and (prefers-reduced-motion: reduce) {
+  .haruhime-carousel__slide {
+    transition: none;
+  }
+}
+
+/* カード07タイトル：スマホのみ2行表示（PC/タブレットは1行のまま無変更） */
+.haruhime-sp-only-br {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .haruhime-sp-only-br {
+    display: inline;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section Promise: お客様への約束
+   ============================================================ */
+
+.haruhime-section-promise {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fff8fa 50%, #ffffff 100%);
+  padding: 84px 20px 88px;
+  overflow: hidden;
+}
+
+.haruhime-section-promise::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: rgba(233, 30, 99, 0.06);
+  pointer-events: none;
+}
+
+.haruhime-section-promise::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  background: rgba(255, 192, 203, 0.12);
+  pointer-events: none;
+}
+
+.haruhime-section-promise__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.haruhime-section-promise__header {
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.haruhime-section-promise__eyebrow {
+  margin: 0 0 10px;
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.haruhime-section-promise__title {
+  margin: 0;
+  color: #e91e63;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.haruhime-section-promise__subtitle {
+  margin: 14px auto 0;
+  max-width: 720px;
+  color: #666666;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.haruhime-promise-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.haruhime-promise-grid__item {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ffe0e8;
+  border-radius: 24px;
+  padding: 32px 28px 30px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.haruhime-promise-grid__item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(233, 30, 99, 0.35);
+  box-shadow: 0 18px 38px rgba(233, 30, 99, 0.12);
+}
+
+.haruhime-promise-grid__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  background: #fff0f5;
+  color: #e91e63;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.haruhime-promise-grid__title {
+  margin: 0 0 12px;
+  color: #333333;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.haruhime-promise-grid__catch {
+  margin: 0 0 14px;
+  color: #e91e63;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.haruhime-promise-grid__desc {
+  margin: 0;
+  color: #666666;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.85;
+  text-align: left;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-promise {
+    padding: 72px 18px 76px;
+  }
+  .haruhime-promise-grid {
+    gap: 18px;
+  }
+  .haruhime-promise-grid__item {
+    padding: 28px 22px 26px;
+  }
+  .haruhime-promise-grid__icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+  .haruhime-promise-grid__title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .haruhime-section-promise {
+    padding: 56px 14px 60px;
+  }
+  .haruhime-section-promise__header {
+    margin-bottom: 32px;
+  }
+  .haruhime-promise-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .haruhime-promise-grid__item {
+    padding: 24px 20px 22px;
+  }
+  .haruhime-promise-grid__icon {
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+  .haruhime-promise-grid__title {
+    font-size: 19px;
+  }
+  .haruhime-promise-grid__catch {
+    font-size: 14px;
+  }
+  .haruhime-promise-grid__desc {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haruhime-promise-grid__item {
+    transition: none;
+  }
+  .haruhime-promise-grid__item:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section Seasonal: 季節のおすすめ
+   ============================================================ */
+
+.haruhime-section-seasonal {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fff9fb 50%, #ffffff 100%);
+  padding: 84px 20px 88px;
+  overflow: hidden;
+}
+
+.haruhime-section-seasonal::before {
+  content: "";
+  position: absolute;
+  top: -90px;
+  left: -90px;
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  background: rgba(233, 30, 99, 0.05);
+  pointer-events: none;
+}
+
+.haruhime-section-seasonal::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: rgba(255, 192, 203, 0.14);
+  pointer-events: none;
+}
+
+.haruhime-section-seasonal__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.haruhime-section-seasonal__header {
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.haruhime-section-seasonal__eyebrow {
+  margin: 0 0 10px;
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.haruhime-section-seasonal__title {
+  margin: 0;
+  color: #e91e63;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.haruhime-section-seasonal__subtitle {
+  margin: 14px auto 0;
+  max-width: 720px;
+  color: #666666;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.haruhime-seasonal-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.haruhime-seasonal-grid__item {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ffe0e8;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.haruhime-seasonal-grid__item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(233, 30, 99, 0.35);
+  box-shadow: 0 18px 40px rgba(233, 30, 99, 0.14);
+}
+
+.haruhime-seasonal-grid__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #fff5f8;
+}
+
+.haruhime-seasonal-grid__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 480ms ease;
+}
+
+.haruhime-seasonal-grid__item:hover .haruhime-seasonal-grid__image {
+  transform: scale(1.04);
+}
+
+.haruhime-seasonal-grid__body {
+  padding: 24px 24px 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.haruhime-seasonal-grid__region {
+  margin: 0 0 6px;
+  color: #e91e63;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.haruhime-seasonal-grid__name {
+  margin: 0 0 12px;
+  color: #333333;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.haruhime-seasonal-grid__catch {
+  margin: 0 0 12px;
+  color: #e91e63;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.haruhime-seasonal-grid__desc {
+  margin: 0;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-seasonal {
+    padding: 72px 18px 76px;
+  }
+  .haruhime-seasonal-grid {
+    gap: 18px;
+  }
+  .haruhime-seasonal-grid__body {
+    padding: 22px 22px 24px;
+  }
+  .haruhime-seasonal-grid__name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .haruhime-section-seasonal {
+    padding: 56px 14px 60px;
+  }
+  .haruhime-section-seasonal__header {
+    margin-bottom: 32px;
+  }
+  .haruhime-seasonal-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .haruhime-seasonal-grid__body {
+    padding: 20px 20px 22px;
+  }
+  .haruhime-seasonal-grid__name {
+    font-size: 19px;
+  }
+  .haruhime-seasonal-grid__catch {
+    font-size: 14px;
+  }
+  .haruhime-seasonal-grid__desc {
+    font-size: 13.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haruhime-seasonal-grid__item,
+  .haruhime-seasonal-grid__image {
+    transition: none;
+  }
+  .haruhime-seasonal-grid__item:hover {
+    transform: none;
+  }
+  .haruhime-seasonal-grid__item:hover .haruhime-seasonal-grid__image {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section Store & Company: 店舗・会社情報
+   ============================================================ */
+
+.haruhime-section-store {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fff8fa 50%, #ffffff 100%);
+  padding: 84px 20px 88px;
+  overflow: hidden;
+}
+
+.haruhime-section-store::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: rgba(233, 30, 99, 0.05);
+  pointer-events: none;
+}
+
+.haruhime-section-store::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: rgba(255, 192, 203, 0.12);
+  pointer-events: none;
+}
+
+.haruhime-section-store__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.haruhime-section-store__header {
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.haruhime-section-store__eyebrow {
+  margin: 0 0 10px;
+  color: #e91e63;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+}
+
+.haruhime-section-store__title {
+  margin: 0;
+  color: #e91e63;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.haruhime-section-store__subtitle {
+  margin: 14px auto 0;
+  max-width: 720px;
+  color: #666666;
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.haruhime-section-store__main {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+  align-items: start;
+  margin: 0 0 48px;
+}
+
+.haruhime-store-info {
+  background: #ffffff;
+  border: 1px solid #ffe0e8;
+  border-radius: 24px;
+  padding: 32px 30px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.haruhime-store-info__name {
+  margin: 0 0 22px;
+  color: #333333;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #ffe0e8;
+}
+
+.haruhime-store-info__list {
+  margin: 0;
+  padding: 0;
+}
+
+.haruhime-store-info__row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px dashed #ffe0e8;
+}
+
+.haruhime-store-info__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.haruhime-store-info__term {
+  margin: 0;
+  color: #e91e63;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  padding-top: 2px;
+}
+
+.haruhime-store-info__desc {
+  margin: 0;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.haruhime-store-map {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.haruhime-store-map__image-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff5f8;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.haruhime-store-map__image-link:hover,
+.haruhime-store-map__image-link:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 44px rgba(233, 30, 99, 0.14);
+  text-decoration: none;
+}
+
+.haruhime-store-map__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.haruhime-store-map__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 56px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #e91e63;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(233, 30, 99, 0.28);
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.haruhime-store-map__button:hover,
+.haruhime-store-map__button:focus {
+  background: #c2185b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(233, 30, 99, 0.36);
+  text-decoration: none;
+}
+
+.haruhime-store-map__button-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.haruhime-store-map__button-label {
+  line-height: 1;
+}
+
+.haruhime-store-line {
+  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 60%, #fff5f8 100%);
+  border: 1px solid #d4edda;
+  border-radius: 24px;
+  padding: 32px 30px;
+  box-shadow: 0 12px 32px rgba(76, 175, 80, 0.08);
+  margin: 0 0 36px;
+}
+
+.haruhime-store-line__inner {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  align-items: center;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.haruhime-store-line__qr-wrap {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.haruhime-store-line__qr {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.haruhime-store-line__body {
+  text-align: left;
+}
+
+.haruhime-store-line__eyebrow {
+  margin: 0 0 8px;
+  color: #06c755;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.haruhime-store-line__title {
+  margin: 0 0 14px;
+  color: #333333;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.haruhime-store-line__desc {
+  margin: 0;
+  color: #555555;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.haruhime-company-info {
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  padding: 22px 24px 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.haruhime-company-info__eyebrow {
+  margin: 0 0 4px;
+  color: #999999;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+
+.haruhime-company-info__title {
+  margin: 0 0 16px;
+  color: #555555;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.haruhime-company-info__list {
+  margin: 0;
+  padding: 0;
+}
+
+.haruhime-company-info__row {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.haruhime-company-info__row:not(:last-child) {
+  border-bottom: 1px dotted #eeeeee;
+}
+
+.haruhime-company-info__term {
+  margin: 0;
+  color: #999999;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding-top: 2px;
+}
+
+.haruhime-company-info__desc {
+  margin: 0;
+  color: #666666;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-store {
+    padding: 72px 18px 76px;
+  }
+  .haruhime-section-store__main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .haruhime-store-line__inner {
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-store {
+    padding: 56px 14px 60px;
+  }
+  .haruhime-section-store__header {
+    margin-bottom: 32px;
+  }
+  .haruhime-store-info {
+    padding: 26px 22px;
+  }
+  .haruhime-store-info__name {
+    font-size: 21px;
+    margin-bottom: 18px;
+  }
+  .haruhime-store-info__row {
+    grid-template-columns: 80px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+  }
+  .haruhime-store-info__term {
+    font-size: 13px;
+  }
+  .haruhime-store-info__desc {
+    font-size: 14.5px;
+  }
+  .haruhime-store-map__button {
+    font-size: 15px;
+    min-height: 52px;
+  }
+  .haruhime-store-line {
+    padding: 26px 22px;
+    margin-bottom: 30px;
+  }
+  .haruhime-store-line__inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    text-align: center;
+  }
+  .haruhime-store-line__qr-wrap {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .haruhime-store-line__body {
+    text-align: center;
+  }
+  .haruhime-store-line__title {
+    font-size: 20px;
+  }
+  .haruhime-company-info {
+    padding: 20px 18px 18px;
+  }
+  .haruhime-company-info__row {
+    grid-template-columns: 76px 1fr;
+    gap: 10px;
+    padding: 7px 0;
+  }
+  .haruhime-company-info__term {
+    font-size: 11px;
+  }
+  .haruhime-company-info__desc {
+    font-size: 12.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haruhime-store-map__image-link,
+  .haruhime-store-map__button {
+    transition: none;
+  }
+  .haruhime-store-map__image-link:hover,
+  .haruhime-store-map__button:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section Store: Layout Update v1.0
+   左カラムに 店舗情報 + LINE QR + 会社概要 を統合、右と上下揃え
+   ============================================================ */
+
+.haruhime-section-store__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.haruhime-section-store__main {
+  align-items: stretch;
+  margin-bottom: 0;
+}
+
+.haruhime-store-map {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.haruhime-store-map__image-link {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.haruhime-store-map__image-link .haruhime-store-map__image {
+  width: 100%;
+  height: auto;
+}
+
+.haruhime-section-store__left .haruhime-store-line {
+  margin: 0;
+  padding: 22px 22px 22px;
+}
+
+.haruhime-section-store__left .haruhime-store-line__inner {
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  max-width: none;
+}
+
+.haruhime-section-store__left .haruhime-store-line__qr-wrap {
+  padding: 10px;
+}
+
+.haruhime-section-store__left .haruhime-store-line__title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.haruhime-section-store__left .haruhime-store-line__desc {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.haruhime-section-store__left .haruhime-company-info {
+  max-width: none;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-store__left {
+    gap: 18px;
+  }
+  .haruhime-store-map {
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-store__left {
+    gap: 16px;
+  }
+  .haruhime-section-store__left .haruhime-store-line {
+    padding: 22px 18px;
+  }
+  .haruhime-section-store__left .haruhime-store-line__inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+  .haruhime-section-store__left .haruhime-store-line__qr-wrap {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  .haruhime-section-store__left .haruhime-store-line__body {
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   Phase 1 Section Store: Layout Update v2.0
+   2行×2列グリッド：地図の間延び解消
+   ============================================================ */
+
+.haruhime-section-store__left {
+  display: contents;
+}
+
+.haruhime-section-store__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  grid-template-rows: auto auto;
+  gap: 28px 40px;
+  align-items: stretch;
+  margin: 0 0 48px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info,
+.haruhime-section-store__grid > .haruhime-store-map,
+.haruhime-section-store__grid > .haruhime-store-line,
+.haruhime-section-store__grid > .haruhime-company-info {
+  height: 100%;
+  margin: 0;
+  max-width: none;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image-link {
+  flex: 0 0 auto;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line {
+  padding: 24px 24px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner {
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  max-width: none;
+  height: 100%;
+  align-items: center;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info {
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__list {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-store__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-store__grid {
+    gap: 18px;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line {
+    padding: 22px 18px;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__body {
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   Phase 1 Total Design v3.0 (class names adapted to actual markup)
+   下方2セクション（季節のおすすめ + 店舗・会社情報）の
+   コンパクト化＋店舗情報の2x2グリッド微調整
+   ============================================================ */
+
+/* ----- 共通：セクション上下 padding 軽量化 ----- */
+.haruhime-section-seasonal,
+.haruhime-section-store {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* ----- A. 季節のおすすめ：カード縦圧縮 ----- */
+.haruhime-section-seasonal .haruhime-seasonal-grid__image-wrap,
+.haruhime-section-seasonal .haruhime-seasonal-grid__image {
+  aspect-ratio: 16 / 9;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__item {
+  overflow: hidden;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__body {
+  padding: 22px 24px 26px;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__region {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__name {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__catch {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__desc {
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-seasonal .haruhime-seasonal-grid__body {
+    padding: 18px 18px 20px;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__name {
+    font-size: 19px;
+  }
+}
+
+/* ----- B. 店舗・会社情報：2x2グリッド微調整 + コンパクト化 ----- */
+.haruhime-section-store__grid {
+  grid-template-columns: 1fr 1.05fr;
+  gap: 22px 28px;
+  margin: 0 0 32px;
+}
+
+/* ----- B-1. 店舗情報カード（上段左）コンパクト化 ----- */
+.haruhime-section-store__grid > .haruhime-store-info {
+  padding: 24px 26px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__name {
+  font-size: 22px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row {
+  padding: 9px 0;
+  gap: 16px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__term {
+  font-size: 13px;
+  min-width: 76px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__desc {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ----- B-2. 地図＋ボタン（上段右）コンパクト化 ----- */
+.haruhime-section-store__grid > .haruhime-store-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 0;
+  background: transparent;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image-link {
+  flex: 0 0 auto;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__button {
+  align-self: center;
+  width: auto;
+  min-width: 240px;
+  max-width: 320px;
+  padding: 12px 24px;
+  font-size: 14.5px;
+  min-height: 44px;
+  border-radius: 999px;
+}
+
+/* ----- B-3. LINE QR（下段左）コンパクト化 ----- */
+.haruhime-section-store__grid > .haruhime-store-line {
+  padding: 22px 24px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner {
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  max-width: none;
+  height: 100%;
+  align-items: center;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr {
+  width: 120px;
+  height: 120px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__eyebrow {
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__desc {
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+/* ----- B-4. 会社概要（下段右）コンパクト化 ----- */
+.haruhime-section-store__grid > .haruhime-company-info {
+  max-width: none;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__eyebrow {
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__title {
+  font-size: 19px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__list {
+  flex: 1 1 auto;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__row {
+  padding: 8px 0;
+  gap: 14px;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__term {
+  font-size: 13px;
+  min-width: 72px;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__desc {
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+/* ----- B-5. レスポンシブ ----- */
+@media (max-width: 960px) {
+  .haruhime-section-store__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-seasonal,
+  .haruhime-section-store {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .haruhime-section-store__grid {
+    gap: 16px;
+  }
+  .haruhime-section-store__grid > .haruhime-store-info,
+  .haruhime-section-store__grid > .haruhime-company-info {
+    padding: 20px 18px;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line {
+    padding: 20px 18px;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr {
+    width: 100%;
+    height: auto;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__body {
+    text-align: center;
+  }
+  .haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__button {
+    min-width: 200px;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* ============================================================
+   Phase 1 Unified Card v4.0
+   店舗・会社情報セクションを1つの統合カードに再表現
+   季節のおすすめのコンパクト化
+   ============================================================ */
+
+.haruhime-section-seasonal,
+.haruhime-section-store {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__image-wrap,
+.haruhime-section-seasonal .haruhime-seasonal-grid__image {
+  aspect-ratio: 16 / 9 !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__item {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__body {
+  padding: 22px 24px 26px !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__region,
+.haruhime-section-seasonal .haruhime-seasonal-grid__eyebrow {
+  font-size: 13px !important;
+  margin-bottom: 8px !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__name,
+.haruhime-section-seasonal .haruhime-seasonal-grid__title {
+  font-size: 22px !important;
+  margin-bottom: 8px !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__catch {
+  font-size: 14px !important;
+  margin-bottom: 10px !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__desc,
+.haruhime-section-seasonal .haruhime-seasonal-grid__description {
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-seasonal .haruhime-seasonal-grid__body {
+    padding: 18px 18px 20px !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__name,
+  .haruhime-section-seasonal .haruhime-seasonal-grid__title {
+    font-size: 19px !important;
+  }
+}
+
+.haruhime-section-store__grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto auto !important;
+  gap: 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #F4C0D1 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(212, 83, 126, 0.08) !important;
+  padding: 0 !important;
+  margin: 0 0 48px !important;
+  overflow: hidden;
+  align-items: stretch !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info,
+.haruhime-section-store__grid > .haruhime-store-map,
+.haruhime-section-store__grid > .haruhime-store-line,
+.haruhime-section-store__grid > .haruhime-company-info {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info,
+.haruhime-section-store__grid > .haruhime-store-map {
+  border-bottom: 1px dashed rgba(244, 192, 209, 0.7) !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info,
+.haruhime-section-store__grid > .haruhime-store-line {
+  border-right: 1px dashed rgba(244, 192, 209, 0.7) !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info {
+  padding: 26px 24px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__name {
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #D4537E;
+  display: inline-block;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info dl,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__list {
+  margin: 0 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__term,
+.haruhime-section-store__grid > .haruhime-store-info dt {
+  font-size: 12.5px !important;
+  color: #D4537E !important;
+  font-weight: 500 !important;
+  margin-top: 10px !important;
+  margin-bottom: 2px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__desc,
+.haruhime-section-store__grid > .haruhime-store-info dd {
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+  padding: 26px 24px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image-link {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  object-fit: cover !important;
+  display: block;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__button {
+  align-self: center !important;
+  width: auto !important;
+  min-width: 200px !important;
+  max-width: 280px !important;
+  padding: 11px 24px !important;
+  font-size: 14px !important;
+  min-height: 42px !important;
+  border-radius: 999px !important;
+  margin-top: auto;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line {
+  padding: 26px 24px !important;
+  background: rgba(225, 245, 238, 0.35) !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__eyebrow {
+  font-size: 11px !important;
+  letter-spacing: 0.14em !important;
+  color: #1D9E75 !important;
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  margin-bottom: 14px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner,
+.haruhime-section-store__grid > .haruhime-store-line__body-row {
+  display: grid !important;
+  grid-template-columns: 110px 1fr !important;
+  gap: 16px !important;
+  align-items: center !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr,
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+  width: 110px !important;
+  height: 110px !important;
+  margin: 0 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__desc {
+  font-size: 12.5px !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info {
+  padding: 26px 24px !important;
+  max-width: none !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__eyebrow {
+  font-size: 11px !important;
+  letter-spacing: 0.14em !important;
+  color: #D4537E !important;
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__title {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  margin-bottom: 14px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #D4537E;
+  display: inline-block;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info dl,
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__list {
+  margin: 0 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__term,
+.haruhime-section-store__grid > .haruhime-company-info dt {
+  font-size: 12.5px !important;
+  color: #D4537E !important;
+  font-weight: 500 !important;
+  margin-top: 10px !important;
+  margin-bottom: 2px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__desc,
+.haruhime-section-store__grid > .haruhime-company-info dd {
+  font-size: 13.5px !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-store__grid {
+    grid-template-columns: 1fr !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-info,
+  .haruhime-section-store__grid > .haruhime-store-line {
+    border-right: none !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-info,
+  .haruhime-section-store__grid > .haruhime-store-map,
+  .haruhime-section-store__grid > .haruhime-store-line {
+    border-bottom: 1px dashed rgba(244, 192, 209, 0.7) !important;
+  }
+  .haruhime-section-store__grid > .haruhime-company-info {
+    border-bottom: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-seasonal,
+  .haruhime-section-store {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .haruhime-section-store__grid {
+    border-radius: 12px !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-info,
+  .haruhime-section-store__grid > .haruhime-store-map,
+  .haruhime-section-store__grid > .haruhime-store-line,
+  .haruhime-section-store__grid > .haruhime-company-info {
+    padding: 22px 18px !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner,
+  .haruhime-section-store__grid > .haruhime-store-line__body-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    text-align: center !important;
+    justify-items: center;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr,
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+    width: 140px !important;
+    height: 140px !important;
+    margin: 0 auto !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__desc {
+    text-align: center !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__button {
+    width: 100% !important;
+    max-width: 280px !important;
+  }
+}
+
+/* ============================================================
+   Phase 1 Unified Card v4.1 (slim)
+   v4.0 への差分のみ：
+   (1) LINEセル背景を透明化（4セル白で統一）
+   (2) お客様への約束セクションのコンパクト化
+   ============================================================ */
+
+/* (1) LINE セル背景を透明に（v4.0 の薄緑を打ち消し、他セルと統一） */
+.haruhime-section-store__grid > .haruhime-store-line {
+  background: transparent !important;
+}
+
+/* (2) お客様への約束：セクション padding 軽量化 */
+.haruhime-section-promise {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+/* (2) お客様への約束：カードコンパクト化（実クラス promise-grid__*） */
+.haruhime-section-promise .haruhime-promise-grid__item {
+  padding: 24px 22px !important;
+}
+
+.haruhime-section-promise .haruhime-promise-grid__icon {
+  width: 60px !important;
+  height: 60px !important;
+  font-size: 28px !important;
+  margin-bottom: 14px !important;
+}
+
+.haruhime-section-promise .haruhime-promise-grid__title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+}
+
+.haruhime-section-promise .haruhime-promise-grid__catch {
+  font-size: 14px !important;
+  margin-bottom: 10px !important;
+  line-height: 1.6 !important;
+}
+
+.haruhime-section-promise .haruhime-promise-grid__desc {
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-promise {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .haruhime-section-promise .haruhime-promise-grid__item {
+    padding: 20px 18px !important;
+  }
+  .haruhime-section-promise .haruhime-promise-grid__icon {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 24px !important;
+  }
+  .haruhime-section-promise .haruhime-promise-grid__title {
+    font-size: 16px !important;
+  }
+}
+
+/* ============================================================
+   Phase 1 Frame Unified v4.2
+   全カードの枠サイズを「お客様への約束」基準に統一
+   季節のおすすめは横並び（画像左/テキスト右）に
+   画像は object-fit: contain で果物全姿表示
+   ============================================================ */
+
+/* ----- A. 共通：基準カードサイズ ----- */
+.haruhime-section-promise .haruhime-promise-card,
+.haruhime-section-promise .haruhime-promise-list__item,
+.haruhime-section-seasonal .haruhime-seasonal-grid__item,
+.haruhime-section-store__grid > .haruhime-store-info,
+.haruhime-section-store__grid > .haruhime-store-map,
+.haruhime-section-store__grid > .haruhime-store-line,
+.haruhime-section-store__grid > .haruhime-company-info {
+  min-height: 220px !important;
+  height: 220px !important;
+  box-sizing: border-box !important;
+}
+
+/* ----- B. 季節のおすすめ：横並びレイアウト（画像左/テキスト右） ----- */
+.haruhime-section-seasonal .haruhime-seasonal-grid__item {
+  display: flex !important;
+  flex-direction: row !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  align-items: stretch !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__image-wrap {
+  flex: 0 0 45% !important;
+  width: 45% !important;
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  background: #FBEAF0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+  display: block !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__body {
+  flex: 1 1 55% !important;
+  width: 55% !important;
+  padding: 22px 22px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__region,
+.haruhime-section-seasonal .haruhime-seasonal-grid__eyebrow {
+  font-size: 12px !important;
+  margin-bottom: 4px !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__name,
+.haruhime-section-seasonal .haruhime-seasonal-grid__title {
+  font-size: 18px !important;
+  margin-bottom: 6px !important;
+  line-height: 1.3 !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__catch {
+  font-size: 13px !important;
+  margin-bottom: 8px !important;
+  line-height: 1.5 !important;
+}
+
+.haruhime-section-seasonal .haruhime-seasonal-grid__desc,
+.haruhime-section-seasonal .haruhime-seasonal-grid__description {
+  font-size: 12.5px !important;
+  line-height: 1.6 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* ----- C. 店舗・会社情報：各セル縦220px統一 ----- */
+.haruhime-section-store__grid {
+  grid-template-rows: 220px 220px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info {
+  padding: 22px 22px !important;
+  overflow: hidden !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__name {
+  font-size: 16px !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__term,
+.haruhime-section-store__grid > .haruhime-store-info dt {
+  font-size: 11.5px !important;
+  margin-top: 6px !important;
+  margin-bottom: 1px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__desc,
+.haruhime-section-store__grid > .haruhime-store-info dd {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map {
+  padding: 18px 22px !important;
+  gap: 10px !important;
+  justify-content: space-between !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+  max-height: 130px !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image-link {
+  flex: 0 0 auto !important;
+  max-height: 130px !important;
+  overflow: hidden !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__button {
+  min-height: 38px !important;
+  padding: 9px 22px !important;
+  font-size: 13px !important;
+  max-width: 240px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line {
+  padding: 22px 22px !important;
+  overflow: hidden !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__eyebrow {
+  font-size: 10.5px !important;
+  margin-bottom: 4px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__title {
+  font-size: 15px !important;
+  margin-bottom: 10px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner,
+.haruhime-section-store__grid > .haruhime-store-line__body-row {
+  grid-template-columns: 90px 1fr !important;
+  gap: 14px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr,
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+  width: 90px !important;
+  height: 90px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__desc {
+  font-size: 11.5px !important;
+  line-height: 1.55 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info {
+  padding: 22px 22px !important;
+  overflow: hidden !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__eyebrow {
+  font-size: 10.5px !important;
+  margin-bottom: 4px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__title {
+  font-size: 15px !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 6px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__term,
+.haruhime-section-store__grid > .haruhime-company-info dt {
+  font-size: 11.5px !important;
+  margin-top: 6px !important;
+  margin-bottom: 1px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__desc,
+.haruhime-section-store__grid > .haruhime-company-info dd {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+}
+
+/* ----- D. レスポンシブ ----- */
+@media (max-width: 960px) {
+  .haruhime-section-seasonal .haruhime-seasonal-grid__item {
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__image-wrap {
+    flex: 0 0 180px !important;
+    width: 100% !important;
+    height: 180px !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__body {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    padding: 18px 20px !important;
+  }
+  .haruhime-section-store__grid {
+    grid-template-rows: auto auto auto auto !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-info,
+  .haruhime-section-store__grid > .haruhime-store-map,
+  .haruhime-section-store__grid > .haruhime-store-line,
+  .haruhime-section-store__grid > .haruhime-company-info {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .haruhime-section-promise .haruhime-promise-card,
+  .haruhime-section-promise .haruhime-promise-grid__item {
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-seasonal .haruhime-seasonal-grid__image-wrap {
+    height: 160px !important;
+    flex: 0 0 160px !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__body {
+    padding: 16px 18px !important;
+  }
+}
+
+/* ============================================================
+   Phase 1 Polish v4.3 (scoped)
+   v4.2 後の仕上げ：破線削除/住所のみ1行化/行間統一/タイトル統一
+   ※住所1行化とbr非表示は「所在地の行（__row:first-child）」のみに限定
+   ============================================================ */
+
+/* ----- A. 破線（区切り線）を全削除 ----- */
+.haruhime-section-store__grid > .haruhime-store-info,
+.haruhime-section-store__grid > .haruhime-store-map,
+.haruhime-section-store__grid > .haruhime-store-line,
+.haruhime-section-store__grid > .haruhime-company-info {
+  border: none !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+}
+
+@media (max-width: 960px) {
+  .haruhime-section-store__grid > .haruhime-store-info,
+  .haruhime-section-store__grid > .haruhime-store-map,
+  .haruhime-section-store__grid > .haruhime-store-line,
+  .haruhime-section-store__grid > .haruhime-company-info {
+    border-bottom: none !important;
+    border-right: none !important;
+  }
+}
+
+/* ----- B. 住所のみ1行化（所在地の行だけに限定） ----- */
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:first-child .haruhime-store-info__desc br {
+  display: none !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:first-child .haruhime-store-info__desc {
+  white-space: nowrap !important;
+  font-size: 12px !important;
+  overflow: hidden !important;
+}
+
+/* ----- C. 店舗情報と会社概要の行間統一 ----- */
+.haruhime-section-store__grid > .haruhime-store-info dt,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__term,
+.haruhime-section-store__grid > .haruhime-company-info dt,
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__term {
+  font-size: 11.5px !important;
+  color: #D4537E !important;
+  font-weight: 500 !important;
+  margin-top: 5px !important;
+  margin-bottom: 1px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.3 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info dd,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__desc,
+.haruhime-section-store__grid > .haruhime-company-info dd,
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__desc {
+  font-size: 12.5px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info dl,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__list,
+.haruhime-section-store__grid > .haruhime-company-info dl,
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__list {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ----- D. タイトル統一（はる姫川口店 / 運営会社） ----- */
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__name {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-top: 0 !important;
+  margin-bottom: 6px !important;
+  padding-top: 0 !important;
+  padding-bottom: 4px !important;
+  display: inline-block;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-top: 0 !important;
+  margin-bottom: 6px !important;
+  padding-top: 0 !important;
+  padding-bottom: 4px !important;
+  display: inline-block;
+}
+
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__eyebrow {
+  font-size: 10px !important;
+  margin-bottom: 2px !important;
+  line-height: 1.3 !important;
+}
+
+/* ----- E. セルの padding を縮小して全項目が見えるように ----- */
+.haruhime-section-store__grid > .haruhime-store-info,
+.haruhime-section-store__grid > .haruhime-company-info {
+  padding: 18px 20px !important;
+  overflow: hidden !important;
+}
+
+/* ----- F. スマホ：所在地も折り返し許可 ----- */
+@media (max-width: 640px) {
+  .haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:first-child .haruhime-store-info__desc {
+    white-space: normal !important;
+    font-size: 12px !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:first-child .haruhime-store-info__desc br {
+    display: inline !important;
+  }
+}
+
+/* ============================================================
+   Phase 1 Polish v4.4 (scoped)
+   v4.3 後の仕上げ：地図枠削除/地図拡大/QR正方形/事業内容下余白(最終行のみ)/店舗5項目可視
+   ============================================================ */
+
+/* ----- A. 地図のピンク枠を完全削除 ----- */
+.haruhime-section-store__grid > .haruhime-store-map {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 14px 12px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image-link {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+  overflow: visible !important;
+  max-height: 200px !important;
+}
+
+/* ----- B. 地図を大きく見やすく（max-height 130 → 200） ----- */
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 200px !important;
+  max-width: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* ボタンを地図直下に詰める */
+.haruhime-section-store__grid > .haruhime-store-map {
+  gap: 8px !important;
+}
+
+/* ----- C. 会社概要「事業内容」(最終行)の下に余白2行分 ----- */
+.haruhime-section-store__grid > .haruhime-company-info .haruhime-company-info__row:last-child .haruhime-company-info__desc {
+  margin-bottom: 36px !important;
+  padding-bottom: 0 !important;
+}
+
+/* ----- D. LINE QR を正方形に + 白い枠削除 ----- */
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr,
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+  width: 100px !important;
+  height: 100px !important;
+  aspect-ratio: 1 / 1 !important;
+  min-width: 100px !important;
+  min-height: 100px !important;
+  max-width: 100px !important;
+  max-height: 100px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  display: block !important;
+  flex: 0 0 100px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr img,
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* LINE セルの inner レイアウトを上揃えに（QR下の余白を防ぐ） */
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner,
+.haruhime-section-store__grid > .haruhime-store-line__body-row {
+  align-items: start !important;
+  grid-template-columns: 100px 1fr !important;
+  gap: 14px !important;
+}
+
+/* ----- E. 店舗情報セル：5項目（駐車場含む）が全部見えるよう height auto ----- */
+.haruhime-section-store__grid > .haruhime-store-info {
+  min-height: 220px !important;
+  height: auto !important;
+  padding: 16px 20px !important;
+  overflow: visible !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info dt,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__term {
+  margin-top: 4px !important;
+  margin-bottom: 1px !important;
+  font-size: 11px !important;
+  line-height: 1.25 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info dd,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__desc {
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__name {
+  font-size: 14px !important;
+  margin-bottom: 5px !important;
+  padding-bottom: 3px !important;
+}
+
+/* 統合カード全体の grid-template-rows を auto に */
+.haruhime-section-store__grid {
+  grid-template-rows: auto auto !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map,
+.haruhime-section-store__grid > .haruhime-store-line,
+.haruhime-section-store__grid > .haruhime-company-info {
+  height: auto !important;
+  min-height: 220px !important;
+}
+
+/* ----- F. レスポンシブ ----- */
+@media (max-width: 640px) {
+  .haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+    max-height: 180px !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr,
+  .haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+    width: 120px !important;
+    height: 120px !important;
+    flex: 0 0 120px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ============================================================
+   Phase 1 v4.5 (scoped)
+   v4.4 直上の追加修正：駐車場(最終行)1行化 / 地図1.5倍(240px) / LINE QR縦中央寄せ
+   ============================================================ */
+
+/* ----- A. 駐車場(store-info 最終行)のみ1行化 ----- */
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:last-child .haruhime-store-info__desc br {
+  display: none !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:last-child .haruhime-store-info__desc {
+  white-space: nowrap !important;
+  font-size: 12px !important;
+  overflow: hidden !important;
+}
+
+/* ----- B. 地図を1.5倍に（v4.4の200px → 240px） ----- */
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+  max-height: 240px !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image-link {
+  max-height: 240px !important;
+}
+
+/* ----- C. LINE QR を縦中央寄せ（代表者行付近へ） ----- */
+.haruhime-section-store__grid > .haruhime-store-line {
+  justify-content: center !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__inner,
+.haruhime-section-store__grid > .haruhime-store-line__body-row {
+  align-items: center !important;
+}
+
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr,
+.haruhime-section-store__grid > .haruhime-store-line .haruhime-store-line__qr-wrap {
+  align-self: center !important;
+}
+
+/* ----- D. レスポンシブ ----- */
+@media (max-width: 640px) {
+  .haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:last-child .haruhime-store-info__desc {
+    white-space: normal !important;
+    font-size: 12px !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row:last-child .haruhime-store-info__desc br {
+    display: inline !important;
+  }
+  .haruhime-section-store__grid > .haruhime-store-map .haruhime-store-map__image {
+    max-height: 200px !important;
+  }
+}
+
+/* ============================================================
+   Store Info Center v4.6
+   店舗情報を中央x軸揃え（地図セルの中心に一致）
+   ※行グリッド(__row: 100px 1fr)を解除して縦積み中央化（v4.5命令書D項の補正実装）
+   ============================================================ */
+
+/* セル全体を中央寄せ */
+.haruhime-section-store__grid > .haruhime-store-info {
+  text-align: center !important;
+}
+
+/* タイトル「はる姫川口店」中央＋下線をタイトル幅に */
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__name {
+  display: block !important;
+  text-align: center !important;
+  width: fit-content !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-bottom: 6px !important;
+  margin-bottom: 14px !important;
+}
+
+/* dl 全体を block・中央 */
+.haruhime-section-store__grid > .haruhime-store-info dl,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__list {
+  display: block !important;
+  text-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* ★ 行グリッド(100px 1fr)を解除＝ラベル上・値下の縦積みに。行paddingで等間隔 */
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__row {
+  display: block !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+  padding: 5px 0 !important;
+  border-bottom: none !important;
+  text-align: center !important;
+}
+
+/* dt（ラベル）独立行・中央 */
+.haruhime-section-store__grid > .haruhime-store-info dt,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__term {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 11.5px !important;
+  color: #D4537E !important;
+  font-weight: 500 !important;
+  margin: 0 0 1px !important;
+  padding: 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* dd（値）独立行・中央 */
+.haruhime-section-store__grid > .haruhime-store-info dd,
+.haruhime-section-store__grid > .haruhime-store-info .haruhime-store-info__desc {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 13px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* ============================================================
+   Store Info Top Space v4.7
+   店舗情報セル上部に2行分の余白を確保（v4.5命令書E項）
+   ============================================================ */
+
+.haruhime-section-store__grid > .haruhime-store-info {
+  padding-top: 50px !important;
+}
+
+@media (max-width: 640px) {
+  .haruhime-section-store__grid > .haruhime-store-info {
+    padding-top: 30px !important;
+  }
+}
+
+/* ============================================================
+   Hero Mascot (2026-06-25): はる姫キャラを ヒーロー右下に配置
+   front-page.php の .haruhime-hero 内に .haruhime-hero__mascot を追加
+   ============================================================ */
+.haruhime-hero__mascot {
+  position: absolute !important;
+  right: clamp(12px, 4vw, 72px) !important;
+  bottom: 0 !important;
+  width: clamp(130px, 20vw, 280px) !important;
+  height: auto !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+}
+
+@media (max-width: 640px) {
+  .haruhime-hero__mascot {
+    width: 116px !important;
+    right: 6px !important;
+  }
+}
+
+/* Promise cards: force content height (fix overflow) 2026-06-26 */
+.haruhime-section-promise .haruhime-promise-grid__item{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;}
+.haruhime-section-promise .haruhime-promise-grid__desc{max-height:none!important;overflow:visible!important;-webkit-line-clamp:none!important;}
+
+
+/* ============================================================
+   TOP fix 2026-06-26 (v2): LINE/Instagram QR を 100px に統一
+   原因: .haruhime-store-line-group ラッパー導入で直下子セレクタ(>)が外れ、
+   基準 .haruhime-store-line__inner(200px 1fr) にフォールバックし肥大化。
+   対応: PC(≥641px)=QR列100pxにコンパクト統一、スマホ(≤640px)=1列スタック中央。
+   ============================================================ */
+@media (min-width: 641px) {
+  .haruhime-section-store__grid > .haruhime-store-line-group {
+    height: 100%;
+    margin: 0;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line {
+    padding: 22px 24px;
+    margin: 0;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__inner {
+    grid-template-columns: 100px 1fr;
+    gap: 18px;
+    max-width: none;
+    align-items: center;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__qr {
+    width: 100px;
+    height: 100px;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__eyebrow {
+    font-size: 11.5px;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__desc {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+}
+@media (max-width: 640px) {
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__qr {
+    width: 160px;
+    height: 160px;
+    max-width: 160px;
+    margin: 0 auto;
+  }
+  .haruhime-section-store__grid .haruhime-store-line-group .haruhime-store-line__body {
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   SNS (FOLLOW US) — moved to front-page bottom 2026-06-27
+   (copied from haruhime-haruhime.css; margin-bottom 100px -> 56px: footer follows)
+   2カラムを中央配置 / QR画像 / フォローボタンは見出し横 / レスポンシブ
+   ============================================================ */
+.haruhime-sns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px 48px;
+  margin-top: 32px;
+  margin-bottom: 56px;
+}
+.haruhime-sns__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 0 1 541px;
+}
+/* Instagram card (2nd) desc stays on one line so it reaches the card's right edge */
+.haruhime-sns__card:last-child .haruhime-sns__desc {
+  white-space: nowrap;
+}
+.haruhime-sns__qr {
+  flex: 0 0 104px;
+  width: 104px;
+  height: 104px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  object-fit: contain;
+}
+.haruhime-sns__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: 2px;
+}
+.haruhime-sns__eyebrow {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+.haruhime-sns__eyebrow--line { color: #06c755; }
+.haruhime-sns__eyebrow--insta { color: #c13584; }
+.haruhime-sns__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.35;
+}
+.haruhime-sns__titlerow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.haruhime-sns__desc {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #6b6b6b;
+}
+.haruhime-sns__follow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #f9527d 0%, #e1306c 60%, #c13584 100%);
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(225, 48, 108, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.haruhime-sns__follow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(225, 48, 108, 0.36);
+}
+@media (max-width: 920px) {
+  .haruhime-sns { gap: 24px; }
+  .haruhime-sns__card { flex: 1 1 100%; max-width: 560px; }
+  .haruhime-sns__card:last-child .haruhime-sns__desc { white-space: normal; }
+}
+@media (max-width: 480px) {
+  .haruhime-sns__card { gap: 14px; }
+  .haruhime-sns__qr { flex-basis: 88px; width: 88px; height: 88px; }
+}
+
+/* store grid now 3 items (SNS moved to FOLLOW US) 2026-06-27 */
+.haruhime-section-store__grid > .haruhime-company-info{grid-column:1 / -1;}
+
+/* header sky background video 2026-06-27 */
+.haruhime-site-header{position:relative;overflow:hidden;}
+.haruhime-site-header__bgvideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;}
+.haruhime-site-header__inner{position:relative;z-index:1;}
+.haruhime-site-header::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.30);z-index:0;pointer-events:none;} /* 文字可読性用・不要なら削除 */
+
+/* === スクショ対策：画像上に「プリンセス of フルーツ」透かしレイヤー（非破壊・CSSのみ）2026-06-29 === */
+/* 対象：TOPの果物(季節カード)画像のみ（キャラ/キーホルダーは無し）。フルーツは右側にあるため右寄りに配置＝フルーツの真上。白っぽいグレーでギリギリ目視。位置=left/top、濃さ=color alpha で調整可 */
+.haruhime-seasonal-grid__image-wrap{ position:relative; }
+.haruhime-seasonal-grid__image-wrap::after{
+  content:"プリンセス of フルーツ";
+  position:absolute; left:68%; top:50%; transform:translate(-50%,-50%);
+  font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"MS Mincho",serif;
+  font-weight:400; font-size:clamp(11px,2.4vw,19px); white-space:nowrap; letter-spacing:.06em;
+  color:rgba(255,255,255,.1); text-shadow:0 1px 2px rgba(0,0,0,.08);
+  pointer-events:none; z-index:4;
+}
+
+/* 季節カードだけを「お客様への約束」カードと同じ高さに合わせる（約束は基準＝無変更）。
+   PC(≥641px)で高さ290px(=約束カードの実寸)に統一。画像は残り領域をcoverで埋め、テキストは下。2026-06-29 */
+@media (min-width: 641px) {
+  .haruhime-section-seasonal .haruhime-seasonal-grid__item{
+    height:290px !important; min-height:290px !important; max-height:290px !important;
+    display:flex !important; flex-direction:column !important; padding:0 !important; overflow:hidden !important; box-sizing:border-box !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__image-wrap{
+    flex:1 1 auto !important; min-height:0 !important; width:100% !important; height:auto !important; aspect-ratio:auto !important; overflow:hidden !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__image{
+    width:100% !important; height:100% !important; object-fit:cover !important; display:block !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__body{
+    flex:0 0 auto !important; padding:12px 16px 14px !important;
+  }
+  .haruhime-section-seasonal .haruhime-seasonal-grid__desc{
+    display:-webkit-box !important; -webkit-line-clamp:2 !important; -webkit-box-orient:vertical !important; overflow:hidden !important;
+  }
+}
+
+

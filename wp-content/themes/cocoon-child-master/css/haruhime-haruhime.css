@@ -1,0 +1,307 @@
+/* ============================================================
+   Page: 激安マルシェ「はる姫」 (/haruhime-website/)
+   page-haruhime.php 専用。haruhime-toppage.css の後に読み込む。
+   既存デザインシステム(.haruhime-section-*, .haruhime-promise-grid 等)を流用し、
+   ページ固有の要素のみここで定義。配色はトップのピンク基調に準拠。
+   ============================================================ */
+
+.haruhime-page-haruhime {
+  background: #ffffff;
+}
+
+/* ----- (1) ページヒーロー ----- */
+.haruhime-page-hero {
+  background: linear-gradient(135deg, #FBEAF0 0%, #FFE4EC 100%);
+  padding: 64px 20px 56px;
+  text-align: center;
+}
+.haruhime-page-hero__inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.haruhime-page-hero__eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: #D4537E;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.haruhime-page-hero__title {
+  font-size: 34px;
+  line-height: 1.3;
+  color: #B83A6B;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+.haruhime-page-hero__lead {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #5a4650;
+  margin: 0;
+}
+
+/* ----- (4) 取扱商品：3カラム ----- */
+.haruhime-promise-grid--3 {
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- (3)(7) 店舗グリッドを2セル横並びに ----- */
+.haruhime-section-store__grid--info,
+.haruhime-section-store__grid--sns {
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto !important;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Instaセル：QRなし・縦中央寄せ */
+.haruhime-store-line--insta .haruhime-store-line__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* ----- (5) キャラクター ----- */
+.haruhime-page-mascot {
+  background: #FFFAF5;
+  padding: 56px 20px;
+}
+.haruhime-page-mascot__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.haruhime-page-mascot__image {
+  width: 220px;
+  height: auto;
+  max-width: 60vw;
+}
+.haruhime-page-mascot__body {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+.haruhime-page-mascot__title {
+  font-size: 22px;
+  color: #B83A6B;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.haruhime-page-mascot__desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #5a4650;
+  margin: 0;
+}
+
+/* ----- (6) お支払い方法 ----- */
+.haruhime-page-payment {
+  background: #ffffff;
+  padding: 56px 20px;
+}
+.haruhime-page-payment__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.haruhime-page-payment__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.haruhime-page-payment__eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: #D4537E;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.haruhime-page-payment__title {
+  font-size: 24px;
+  color: #B83A6B;
+  font-weight: 700;
+  margin: 0;
+}
+.haruhime-page-payment__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.haruhime-page-payment__item {
+  flex: 0 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 22px 18px;
+  border: 1px solid #F3D3DF;
+  border-radius: 14px;
+  background: #FDF6F9;
+  text-align: center;
+}
+.haruhime-page-payment__icon {
+  font-size: 30px;
+}
+.haruhime-page-payment__label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #B83A6B;
+}
+.haruhime-page-payment__note {
+  font-size: 13px;
+  color: #7a6770;
+}
+
+/* ----- (8) CTA ----- */
+.haruhime-page-cta {
+  background: linear-gradient(135deg, #FFE4EC 0%, #FBEAF0 100%);
+  padding: 56px 20px;
+  text-align: center;
+}
+.haruhime-page-cta__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.haruhime-page-cta__text {
+  font-size: 18px;
+  color: #B83A6B;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+.haruhime-page-cta__actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ----- レスポンシブ ----- */
+@media (max-width: 960px) {
+  .haruhime-promise-grid--3 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 640px) {
+  .haruhime-page-hero {
+    padding: 44px 18px 40px;
+  }
+  .haruhime-page-hero__title {
+    font-size: 26px;
+  }
+  .haruhime-promise-grid--3 {
+    grid-template-columns: 1fr !important;
+  }
+  .haruhime-section-store__grid--info,
+  .haruhime-section-store__grid--sns {
+    grid-template-columns: 1fr !important;
+  }
+  .haruhime-page-mascot__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   SNS (FOLLOW US) — clean rebuild 2026-06-26
+   2カラムを中央配置 / QR画像 / フォローボタンは見出し横 / レスポンシブ
+   ============================================================ */
+.haruhime-sns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px 48px;
+  margin-top: 32px;
+  margin-bottom: 100px;
+}
+.haruhime-sns__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 0 1 541px;
+}
+/* Instagram card (2nd) desc stays on one line so it reaches the card's right edge */
+.haruhime-sns__card:last-child .haruhime-sns__desc {
+  white-space: nowrap;
+}
+.haruhime-sns__qr {
+  flex: 0 0 104px;
+  width: 104px;
+  height: 104px;
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  object-fit: contain;
+}
+.haruhime-sns__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: 2px;
+}
+.haruhime-sns__eyebrow {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+.haruhime-sns__eyebrow--line { color: #06c755; }
+.haruhime-sns__eyebrow--insta { color: #c13584; }
+.haruhime-sns__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.35;
+}
+.haruhime-sns__titlerow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.haruhime-sns__desc {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #6b6b6b;
+}
+.haruhime-sns__follow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #f9527d 0%, #e1306c 60%, #c13584 100%);
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(225, 48, 108, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.haruhime-sns__follow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(225, 48, 108, 0.36);
+}
+@media (max-width: 920px) {
+  .haruhime-sns { gap: 24px; }
+  .haruhime-sns__card { flex: 1 1 100%; max-width: 560px; }
+  .haruhime-sns__card:last-child .haruhime-sns__desc { white-space: normal; }
+}
+@media (max-width: 480px) {
+  .haruhime-sns__card { gap: 14px; }
+  .haruhime-sns__qr { flex-basis: 88px; width: 88px; height: 88px; }
+}
+

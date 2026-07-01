@@ -1,0 +1,37 @@
+/*
+ * Haruhime Brand CSS
+ * Scope: Cocoon Child only
+ * Purpose: apply RiiCookieR font without changing Momoon pink color palette.
+ */
+
+@font-face {
+  font-family: "RiiCookieR";
+  src: url("../fonts/RiiCookieR.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --haruhime-brand-font: "RiiCookieR", "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.site-name-text,
+.logo-text,
+#site-title,
+.header .site-name,
+.header-in .site-name,
+.entry-title,
+.page-title,
+.article h1,
+.article h2,
+.article h3 {
+  font-family: var(--haruhime-brand-font);
+  letter-spacing: 0.02em;
+}
+
+.article h1,
+.article h2,
+.article h3 {
+  font-feature-settings: "palt" 1;
+}

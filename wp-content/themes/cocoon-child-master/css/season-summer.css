@@ -1,0 +1,104 @@
+/* season-summer.css — 夏バージョン専用（水色）。すべて body.haru-ver-summer スコープ。
+   toppage.css の var(--hh-*) を水色へ上書き＝全体recolor（"1箇所"方式・依頼18 A案）。
+   構造替え（グラデボタン/帯/カルーセル/モーダル）＋画像(ヒーロー/ロゴ/キーホルダー)のみ個別override。
+   春/秋/冬は本ファイルを読まないので無傷。基準色＝夏確定スナップショット #3aafe8 系。 */
+
+/* ===== 1) 変数：ピンク→水色（単色系はこれだけで全recolor） ===== */
+body.haru-ver-summer {
+  --hh-accent:          #1B8FC4;
+  --hh-accent-rgb:      27, 143, 196;
+  --hh-accent-dark:     #0D86B3;
+  --hh-accent-dark-rgb: 13, 134, 179;
+  --hh-accent-darker:   #0A6E93;
+  --hh-accent2:         #3AAFE8;
+  --hh-border:          #CFE8F3;
+  --hh-border-soft:     #CFE8F3;
+  --hh-border-soft-rgb: 207, 232, 243;
+  --hh-tint:            #EAF6FC;
+  --hh-tint-rgb:        234, 246, 252;
+}
+
+/* ===== 2) ボタン/バッジ/番号＝水色グラデ＋白文字 ===== */
+body.haru-ver-summer .haruhime-button--primary,
+body.haru-ver-summer .haruhime-carousel__card-button,
+body.haru-ver-summer .haruhime-charity-product__button,
+body.haru-ver-summer .haruhime-plan__button,
+body.haru-ver-summer .haruhime-store-map__button,
+body.haru-ver-summer .haruhime-step__num {
+  background: linear-gradient(135deg, #3AAFE8, #0D86B3) !important;
+  color: #ffffff !important;
+  border-color: #0D86B3 !important;
+}
+body.haru-ver-summer .haruhime-button--primary:hover,
+body.haru-ver-summer .haruhime-carousel__card-button:hover,
+body.haru-ver-summer .haruhime-charity-product__button:hover,
+body.haru-ver-summer .haruhime-plan__button:hover,
+body.haru-ver-summer .haruhime-store-map__button:hover {
+  background: linear-gradient(135deg, #DCEFF8, #BFE3F1) !important;
+  color: #0A5F80 !important;
+}
+
+/* ===== 3) ページ帯（page-hero / cta / coming）＝薄水色グラデ ===== */
+body.haru-ver-summer .haruhime-page-hero,
+body.haru-ver-summer .haruhime-page-cta,
+body.haru-ver-summer .haruhime-page-coming {
+  background: linear-gradient(135deg, #DDF1FB, #F2FAFE) !important;
+}
+
+/* ===== 4) カルーセルカード：hover枠/影を水色・中立、文字ホバー影撤去 ===== */
+body.haru-ver-summer .haruhime-carousel__card:hover {
+  border-color: #CFE8F3 !important;
+  box-shadow: 0 18px 38px rgba(27, 143, 196, .18) !important;
+}
+body.haru-ver-summer .haruhime-carousel__card-title,
+body.haru-ver-summer .haruhime-carousel__card-catch,
+body.haru-ver-summer .haruhime-carousel__card-desc {
+  text-shadow: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+body.haru-ver-summer .haruhime-carousel__card-number { color: #0D86B3 !important; }
+
+/* ===== 5) チャリティー：薄地→薄水色＋ホバー白 ===== */
+body.haru-ver-summer .haruhime-charity-grid__item { background: #EAF6FC !important; }
+body.haru-ver-summer .haruhime-charity-grid__item:hover { background: #ffffff !important; }
+
+/* ===== 6) 「＋詳しく」ラベル等（擬似要素）＝水色＋太字 ===== */
+body.haru-ver-summer .haruhime-charity-grid__label::after,
+body.haru-ver-summer .haruhime-charity-grid__item::after { color: #0D86B3 !important; font-weight: 700 !important; }
+
+/* ===== 7) 見出し用語/矢印/インジケーター＝水色 ===== */
+body.haru-ver-summer .haruhime-store-info__term,
+body.haru-ver-summer .haruhime-company-info__term { color: #0D86B3 !important; }
+body.haru-ver-summer .haruhime-carousel__arrow,
+body.haru-ver-summer .haruhime-carousel__arrow--prev,
+body.haru-ver-summer .haruhime-carousel__arrow--next {
+  color: #0D86B3 !important;
+  border-color: #CFE8F3 !important;
+}
+body.haru-ver-summer .haruhime-carousel__arrow:hover {
+  background: linear-gradient(135deg, #3AAFE8, #0D86B3) !important;
+  color: #ffffff !important;
+}
+body.haru-ver-summer .haruhime-carousel__indicator { background: #CFE8F3 !important; }
+body.haru-ver-summer .haruhime-carousel__indicator.is-active,
+body.haru-ver-summer .haruhime-carousel__indicator[aria-current="true"],
+body.haru-ver-summer .haruhime-carousel__indicator[aria-selected="true"] { background: #0D86B3 !important; }
+
+/* ===== 8) チャリティー詳細モーダル＝水色 ===== */
+body.haru-ver-summer .hcmodal__title { color: #1B8FC4 !important; }
+body.haru-ver-summer .hcmodal__close { background: #EAF6FC !important; color: #1B8FC4 !important; }
+body.haru-ver-summer .hcmodal__btn { background: linear-gradient(135deg, #3AAFE8, #0D86B3) !important; color: #ffffff !important; }
+body.haru-ver-summer .hcmodal__btn:hover { background: linear-gradient(135deg, #DCEFF8, #BFE3F1) !important; color: #0A5F80 !important; }
+
+/* ===== 9) 画像：ヒーロー / ロゴ(水色化filter) / キーホルダー ===== */
+body.haru-ver-summer .haruhime-hero {
+  background-image: linear-gradient(rgba(0,40,60,.35), rgba(0,40,60,.35)), url("/haruhime-website/wp-content/uploads/2026/05/grok-image-7e8cb994-2083-4910-be53-037e833cfe6d.jpg") !important;
+  background-repeat: no-repeat; background-position: center center; background-size: cover;
+}
+body.haru-ver-summer .haruhime-site-header__logo { filter: hue-rotate(210deg) saturate(1.15) !important; }
+body.haru-ver-summer .haruhime-charity-product__image { content: url("/haruhime-website/wp-content/uploads/2026/06/%E3%81%AF%E3%82%8B%E5%A7%AB%E5%A4%8F%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%82%AD%E3%83%BC%E3%83%9B%E3%83%AB%E3%83%80%E3%83%BC.jpg") !important; }
+
+/* ※ IGフォロー(#f9527d系)等のブランド色は意図的に維持。夏キャラ(ランダム3種)は functions.php 側で対応予定。 */
+
+

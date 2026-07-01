@@ -1,0 +1,87 @@
+/* ============================================================
+   Haruhime Sub-page Shared Components
+   全サブページ共通。haruhime-toppage.css の後に読み込む。
+   配色はトップのピンク基調に準拠。
+   ============================================================ */
+
+.haruhime-subpage { background:#ffffff; }
+
+/* ----- ページヒーロー帯 ----- */
+.haruhime-page-hero { background:linear-gradient(135deg,#FBEAF0 0%,#FFE4EC 100%); padding:64px 20px 56px; text-align:center; }
+.haruhime-page-hero__inner { max-width:920px; margin:0 auto; }
+.haruhime-page-hero__eyebrow { font-size:13px; letter-spacing:.18em; color:#D4537E; font-weight:600; margin:0 0 12px; }
+.haruhime-page-hero__title { font-size:34px; line-height:1.3; color:#B83A6B; font-weight:700; margin:0 0 16px; }
+.haruhime-page-hero__lead { font-size:15px; line-height:1.9; color:#5a4650; margin:0; }
+
+/* ----- 汎用コンテンツセクション ----- */
+.haruhime-page-section { padding:56px 20px; }
+.haruhime-page-section--tint { background:#FFFAF5; }
+.haruhime-page-section__inner { max-width:1080px; margin:0 auto; }
+.haruhime-page-section__header { text-align:center; margin-bottom:32px; }
+.haruhime-page-section__eyebrow { font-size:12px; letter-spacing:.18em; color:#D4537E; font-weight:600; margin:0 0 6px; }
+.haruhime-page-section__title { font-size:26px; color:#B83A6B; font-weight:700; margin:0 0 8px; }
+.haruhime-page-section__subtitle { font-size:14px; color:#7a6770; margin:0; }
+
+/* ----- フィーチャーカード（アイコン＋見出し＋説明） ----- */
+.haruhime-feature-grid { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+.haruhime-feature { background:#fff; border:1px solid #F3D3DF; border-radius:16px; padding:26px 22px; text-align:center; }
+.haruhime-feature__icon { font-size:34px; line-height:1; }
+.haruhime-feature__title { font-size:17px; font-weight:700; color:#B83A6B; margin:10px 0 8px; }
+.haruhime-feature__catch { font-size:13px; color:#D4537E; margin:0 0 8px; font-weight:600; }
+.haruhime-feature__desc { font-size:13.5px; line-height:1.7; color:#5a4650; margin:0; }
+
+/* ----- プラン／料金カード ----- */
+.haruhime-plan-grid { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; }
+.haruhime-plan { background:#fff; border:1px solid #F3D3DF; border-radius:16px; padding:26px 22px; text-align:center; display:flex; flex-direction:column; }
+.haruhime-plan--featured { border:2px solid #D4537E; }
+.haruhime-plan__badge { align-self:center; background:#FBEAF0; color:#B83A6B; font-size:12px; font-weight:700; padding:4px 12px; border-radius:999px; margin:0 0 10px; }
+.haruhime-plan__name { font-size:17px; font-weight:700; color:#B83A6B; margin:0 0 8px; }
+.haruhime-plan__price { font-size:24px; font-weight:700; color:#D4537E; margin:0 0 4px; }
+.haruhime-plan__price small { font-size:13px; color:#7a6770; font-weight:500; }
+.haruhime-plan__desc { font-size:13px; line-height:1.7; color:#5a4650; margin:8px 0 18px; }
+.haruhime-plan__button { margin-top:auto; align-self:center; background:#D4537E; color:#fff; font-weight:700; font-size:14px; padding:11px 22px; border-radius:999px; text-decoration:none; }
+
+/* ----- ステップ／フロー ----- */
+.haruhime-step-list { list-style:none; margin:0 auto; padding:0; max-width:760px; }
+.haruhime-step { display:flex; gap:16px; padding:18px 0; border-bottom:1px dashed #F3D3DF; }
+.haruhime-step:last-child { border-bottom:none; }
+.haruhime-step__num { flex:0 0 40px; width:40px; height:40px; border-radius:50%; background:#D4537E; color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.haruhime-step__body { flex:1; }
+.haruhime-step__title { font-size:16px; font-weight:700; color:#B83A6B; margin:6px 0 4px; }
+.haruhime-step__desc { font-size:13.5px; line-height:1.7; color:#5a4650; margin:0; }
+
+/* ----- FAQ ----- */
+.haruhime-faq { max-width:820px; margin:0 auto; }
+.haruhime-faq__item { border-bottom:1px solid #F3D3DF; padding:18px 0; }
+.haruhime-faq__q { font-size:15px; font-weight:700; color:#B83A6B; margin:0 0 8px; padding-left:26px; position:relative; }
+.haruhime-faq__q::before { content:"Q"; position:absolute; left:0; color:#D4537E; }
+.haruhime-faq__a { font-size:13.5px; line-height:1.8; color:#5a4650; margin:0; padding-left:26px; position:relative; }
+.haruhime-faq__a::before { content:"A"; position:absolute; left:0; color:#9a8a90; font-weight:700; }
+
+/* ----- お支払い方法 ----- */
+.haruhime-page-payment { padding:56px 20px; }
+.haruhime-page-payment__inner { max-width:720px; margin:0 auto; }
+.haruhime-page-payment__header { text-align:center; margin-bottom:28px; }
+.haruhime-page-payment__eyebrow { font-size:12px; letter-spacing:.18em; color:#D4537E; font-weight:600; margin:0 0 6px; }
+.haruhime-page-payment__title { font-size:24px; color:#B83A6B; font-weight:700; margin:0; }
+.haruhime-page-payment__list { list-style:none; margin:0; padding:0; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.haruhime-page-payment__item { flex:0 1 280px; display:flex; flex-direction:column; align-items:center; gap:6px; padding:22px 18px; border:1px solid #F3D3DF; border-radius:14px; background:#FDF6F9; text-align:center; }
+.haruhime-page-payment__icon { font-size:30px; }
+.haruhime-page-payment__label { font-size:15px; font-weight:700; color:#B83A6B; }
+.haruhime-page-payment__note { font-size:13px; color:#7a6770; }
+
+/* ----- CTA ----- */
+.haruhime-page-cta { background:linear-gradient(135deg,#FFE4EC 0%,#FBEAF0 100%); padding:56px 20px; text-align:center; }
+.haruhime-page-cta__inner { max-width:760px; margin:0 auto; }
+.haruhime-page-cta__text { font-size:18px; color:#B83A6B; font-weight:700; margin:0 0 24px; }
+.haruhime-page-cta__actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+/* ----- プロース（長文） ----- */
+.haruhime-prose { max-width:820px; margin:0 auto; font-size:14.5px; line-height:1.9; color:#4a3a42; }
+.haruhime-prose h3 { color:#B83A6B; font-size:18px; margin:1.4em 0 .5em; }
+.haruhime-note { max-width:820px; margin:18px auto 0; font-size:12.5px; color:#9a8a90; text-align:center; }
+
+@media (max-width:640px){
+  .haruhime-page-hero__title { font-size:26px; }
+  .haruhime-page-section__title { font-size:22px; }
+}
