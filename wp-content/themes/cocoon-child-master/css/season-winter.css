@@ -101,3 +101,6 @@ body.haru-ver-winter .haruhime-charity-product__image { content: url("/haruhime-
 
 /* ※ 冬の透過キャラ(ランダム)は functions.php 側で対応予定。銀ロゴ専用PNGがあれば content:url へ差替推奨。 */
 
+
+/* full seasonal palette */
+body.haru-ver-winter{--hh-c1:#6B7684;--hh-c2:#AAB2BD;--hh-c3:#566270;--hh-c4:#444E5A;--hh-t1:#F5F7FA;--hh-t2:#EDF1F5;--hh-t3:#E3E8EE;--hh-t4:#EEF1F5;--hh-t5:#E3E8EE;--hh-b1:#E1E6EC;--hh-rgb:107,118,132;--hh-rgb2:170,178,189;--hh-rgb3:86,98,112;}

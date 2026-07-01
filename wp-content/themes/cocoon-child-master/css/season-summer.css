@@ -112,3 +112,6 @@ body.haru-ver-summer [class*="__num"],
 body.haru-ver-summer h1,body.haru-ver-summer h2,body.haru-ver-summer h3{color:#1B8FC4 !important;}
 body.haru-ver-summer [class*="haruhime-section"]::before,
 body.haru-ver-summer [class*="haruhime-section"]::after{background:rgba(27,143,196,.10) !important;}
+
+/* full seasonal palette */
+body.haru-ver-summer{--hh-c1:#1B8FC4;--hh-c2:#6FC8EF;--hh-c3:#0D86B3;--hh-c4:#0A6E93;--hh-t1:#EAF6FC;--hh-t2:#DDF1FB;--hh-t3:#CFE8F3;--hh-t4:#E1F5FE;--hh-t5:#CFE8F3;--hh-b1:#CFE8F3;--hh-rgb:27,143,196;--hh-rgb2:111,200,239;--hh-rgb3:13,134,179;}

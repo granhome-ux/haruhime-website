@@ -11,7 +11,7 @@
 
 /* ----- (1) ページヒーロー ----- */
 .haruhime-page-hero {
-  background: linear-gradient(135deg, #FBEAF0 0%, #FFE4EC 100%);
+  background: linear-gradient(135deg, #FBEAF0 0%, var(--hh-t2,#FFE4EC) 100%);
   padding: 64px 20px 56px;
   text-align: center;
 }
@@ -22,14 +22,14 @@
 .haruhime-page-hero__eyebrow {
   font-size: 13px;
   letter-spacing: 0.18em;
-  color: #D4537E;
+  color: var(--hh-c3,#D4537E);
   font-weight: 600;
   margin: 0 0 12px;
 }
 .haruhime-page-hero__title {
   font-size: 34px;
   line-height: 1.3;
-  color: #B83A6B;
+  color: var(--hh-c4,#B83A6B);
   font-weight: 700;
   margin: 0 0 16px;
 }
@@ -90,7 +90,7 @@
 }
 .haruhime-page-mascot__title {
   font-size: 22px;
-  color: #B83A6B;
+  color: var(--hh-c4,#B83A6B);
   font-weight: 700;
   margin: 0 0 12px;
 }
@@ -117,13 +117,13 @@
 .haruhime-page-payment__eyebrow {
   font-size: 12px;
   letter-spacing: 0.18em;
-  color: #D4537E;
+  color: var(--hh-c3,#D4537E);
   font-weight: 600;
   margin: 0 0 6px;
 }
 .haruhime-page-payment__title {
   font-size: 24px;
-  color: #B83A6B;
+  color: var(--hh-c4,#B83A6B);
   font-weight: 700;
   margin: 0;
 }
@@ -143,7 +143,7 @@
   align-items: center;
   gap: 6px;
   padding: 22px 18px;
-  border: 1px solid #F3D3DF;
+  border: 1px solid var(--hh-b1,#F3D3DF);
   border-radius: 14px;
   background: #FDF6F9;
   text-align: center;
@@ -154,7 +154,7 @@
 .haruhime-page-payment__label {
   font-size: 15px;
   font-weight: 700;
-  color: #B83A6B;
+  color: var(--hh-c4,#B83A6B);
 }
 .haruhime-page-payment__note {
   font-size: 13px;
@@ -163,7 +163,7 @@
 
 /* ----- (8) CTA ----- */
 .haruhime-page-cta {
-  background: linear-gradient(135deg, #FFE4EC 0%, #FBEAF0 100%);
+  background: linear-gradient(135deg, var(--hh-t2,#FFE4EC) 0%, #FBEAF0 100%);
   padding: 56px 20px;
   text-align: center;
 }
@@ -173,7 +173,7 @@
 }
 .haruhime-page-cta__text {
   font-size: 18px;
-  color: #B83A6B;
+  color: var(--hh-c4,#B83A6B);
   font-weight: 700;
   margin: 0 0 24px;
 }
@@ -304,3 +304,4 @@
   .haruhime-sns__card { gap: 14px; }
   .haruhime-sns__qr { flex-basis: 88px; width: 88px; height: 88px; }
 }
+
